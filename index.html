@@ -4,40 +4,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dive Into The Blue</title>
+<title>DIVE INTO THE BLUE</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(#012840,#014F86);
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI", sans-serif;
+background:linear-gradient(180deg,#001a2c,#003b64,#006494);
 color:white;
+height:100vh;
+overflow:hidden;
+}
+
+.hero{
+height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-height:100vh;
 text-align:center;
+padding:20px;
 }
 
 h1{
-font-size:55px;
-margin-bottom:10px;
+font-size:60px;
+letter-spacing:3px;
+margin-bottom:15px;
 }
 
-p{
+.subtitle{
 font-size:22px;
 opacity:0.9;
+margin-bottom:40px;
 }
 
 button{
-margin-top:30px;
-padding:15px 30px;
-font-size:18px;
+padding:18px 36px;
+font-size:20px;
 border:none;
-border-radius:30px;
-background:#00C2FF;
+border-radius:50px;
+background:#00c2ff;
 color:white;
 cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#00a8e8;
+}
+
+.wave{
+position:absolute;
+bottom:0;
+width:100%;
+height:120px;
+background:rgba(255,255,255,.08);
+border-radius:50% 50% 0 0;
 }
 </style>
 
@@ -45,13 +73,19 @@ cursor:pointer;
 
 <body>
 
-<div>
+<section class="hero">
+
 <h1>DIVE INTO THE BLUE</h1>
-<p>우리의 바다, 우리의 다이빙</p>
 
-<button>첫 홈페이지 완성!</button>
+<p class="subtitle">
+우리의 바다, 우리의 다이빙
+</p>
 
-</div>
+<button>투어 신청 준비중</button>
+
+</section>
+
+<div class="wave"></div>
 
 </body>
 </html>
