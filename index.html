@@ -2,90 +2,59 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIVE INTO THE BLUE</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:"Segoe UI", sans-serif;
-background:linear-gradient(180deg,#001a2c,#003b64,#006494);
-color:white;
-height:100vh;
-overflow:hidden;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-h1{
-font-size:60px;
-letter-spacing:3px;
-margin-bottom:15px;
-}
-
-.subtitle{
-font-size:22px;
-opacity:0.9;
-margin-bottom:40px;
-}
-
-button{
-padding:18px 36px;
-font-size:20px;
-border:none;
-border-radius:50px;
-background:#00c2ff;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-background:#00a8e8;
-}
-
-.wave{
-position:absolute;
-bottom:0;
-width:100%;
-height:120px;
-background:rgba(255,255,255,.08);
-border-radius:50% 50% 0 0;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dive Into The Blue</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<header>
+  <div class="logo">🌊 DIVE INTO THE BLUE</div>
+
+  <nav>
+    <a href="#">홈</a>
+    <a href="#">투어</a>
+    <a href="#">일정</a>
+    <a href="#">공지</a>
+    <a href="#">갤러리</a>
+  </nav>
+</header>
+
 <section class="hero">
 
-<h1>DIVE INTO THE BLUE</h1>
+  <h1>DIVE INTO THE BLUE</h1>
 
-<p class="subtitle">
-우리의 바다, 우리의 다이빙
-</p>
+  <p>우리의 바다, 우리의 다이빙</p>
 
-<button>투어 신청 준비중</button>
+  <button>다음 투어 보기</button>
 
 </section>
 
-<div class="wave"></div>
+<section class="cards">
+
+<div class="card">
+<h2>🤿 다음 투어</h2>
+<p>제주 가을 투어</p>
+<p>2026.10.16 ~ 10.18</p>
+</div>
+
+<div class="card">
+<h2>📢 공지사항</h2>
+<p>신규 회원 모집</p>
+<p>장비 점검 안내</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Dive Into The Blue
+
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
