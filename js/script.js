@@ -1,35 +1,76 @@
-const tourDate = new Date("2026-10-16");
+/* ===================================
+   다음 투어 D-Day
+=================================== */
 
-const today = new Date();
+const tourDate = new Date("2026-10-16T00:00:00");
 
-const diff = tourDate - today;
+function updateCountdown() {
 
-const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  const now = new Date();
 
-const countdown = document.getElementById("countdown");
+  const difference = tourDate - now;
 
-if(days>0){
+  const countdown =
+    document.getElementById("countdown");
 
-countdown.innerText=`⏳ D-${days}`;
 
-}else if(days===0){
+  if (difference <= 0) {
 
-countdown.innerText="🎉 오늘 출발";
+    countdown.textContent = "투어 시작!";
 
-}else{
+    return;
 
-countdown.innerText="투어 종료";
+  }
+
+
+  const days =
+    Math.ceil(
+      difference /
+      (1000 * 60 * 60 * 24)
+    );
+
+
+  countdown.textContent =
+    `D-${days}`;
 
 }
 
-// 모집 인원
 
-const current=8;
+updateCountdown();
 
-const total=12;
 
-const percent=(current/total)*100;
+/* ===================================
+   모집 인원
+=================================== */
 
-document.getElementById("progressBar").style.width=percent+"%";
+const currentMembers = 8;
 
-document.getElementById("memberCount").innerText=`${current} / ${total}명 신청`;
+const totalMembers = 12;
+
+
+const percentage =
+  (currentMembers / totalMembers) * 100;
+
+
+const progressBar =
+  document.getElementById("progressBar");
+
+
+const memberCount =
+  document.getElementById("memberCount");
+
+
+if (progressBar) {
+
+  progressBar.style.width =
+    percentage + "%";
+
+}
+
+
+if (memberCount) {
+
+  memberCount.textContent =
+    `${currentMembers} / ${totalMembers}명 신청`;
+
+}

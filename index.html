@@ -1,79 +1,269 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dive Into The Blue</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🌊 DIVE INTO THE BLUE</div>
+  <!-- =========================
+       상단 메뉴
+  ========================== -->
 
-  <nav>
-    <a href="#">홈</a>
-    <a href="#">투어</a>
-    <a href="#">일정</a>
-    <a href="#">공지</a>
-    <a href="#">갤러리</a>
-  </nav>
-</header>
+  <header class="header">
 
-<section class="hero">
+    <div class="logo">
+      🌊 DIVE INTO THE BLUE
+    </div>
 
-  <h1>DIVE INTO THE BLUE</h1>
+    <nav class="nav">
 
-  <p>우리의 바다, 우리의 다이빙</p>
+      <a href="index.html">홈</a>
 
-  <button>다음 투어 보기</button>
+      <a href="#tour">투어</a>
 
-</section>
+      <a href="#notice">공지</a>
 
-<section class="cards">
+      <a href="#gallery">갤러리</a>
 
-<div class="card">
+    </nav>
 
-<h2>🤿 다음 투어</h2>
+  </header>
 
-<h3>제주 가을 투어</h3>
 
-<p>📍 제주도</p>
+  <!-- =========================
+       메인 화면
+  ========================== -->
 
-<p>📅 2026.10.16 ~ 10.18</p>
+  <section class="hero">
 
-<p id="countdown">D-계산중...</p>
+    <div class="hero-content">
 
-<div class="progress">
+      <p class="hero-small">
+        SCUBA DIVING CLUB
+      </p>
 
-<div class="progress-bar" id="progressBar"></div>
+      <h1>
+        DIVE INTO<br>
+        THE BLUE
+      </h1>
 
-</div>
+      <p class="hero-subtitle">
+        우리의 바다, 우리의 다이빙
+      </p>
 
-<p id="memberCount">8 / 12명 신청</p>
+      <a href="#tour" class="main-btn">
+        다음 투어 보기
+      </a>
 
-<a href="jeju-tour.html" class="tour-btn">
-투어 상세보기
-</a>
+    </div>
 
-</div>
-<div class="card">
-<h2>📢 공지사항</h2>
-<p>신규 회원 모집</p>
-<p>장비 점검 안내</p>
-</div>
+  </section>
 
-</section>
 
-<footer>
+  <!-- =========================
+       다음 투어
+  ========================== -->
 
-© 2026 Dive Into The Blue
+  <section class="section" id="tour">
 
-</footer>
+    <div class="section-title">
 
-<script src="js/script.js"></script>
+      <p>UPCOMING TOUR</p>
+
+      <h2>다음 투어</h2>
+
+    </div>
+
+
+    <div class="tour-card">
+
+      <div class="tour-info">
+
+        <span class="tour-label">
+          🤿 NEXT TOUR
+        </span>
+
+        <h3>
+          제주 가을 투어
+        </h3>
+
+        <p>
+          📍 제주도 서귀포
+        </p>
+
+        <p>
+          📅 2026.10.16 ~ 10.18
+        </p>
+
+        <p>
+          🤿 보트다이빙 4회
+        </p>
+
+      </div>
+
+
+      <div class="tour-status">
+
+        <div class="countdown-title">
+          투어까지
+        </div>
+
+        <div id="countdown">
+          D-계산중
+        </div>
+
+
+        <div class="progress-title">
+          모집 현황
+        </div>
+
+        <div class="progress">
+
+          <div
+            class="progress-bar"
+            id="progressBar">
+          </div>
+
+        </div>
+
+        <p id="memberCount">
+          8 / 12명 신청
+        </p>
+
+
+        <a
+          href="jeju-tour.html"
+          class="tour-btn">
+
+          투어 상세보기
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       공지사항
+  ========================== -->
+
+  <section class="section" id="notice">
+
+    <div class="section-title">
+
+      <p>NOTICE</p>
+
+      <h2>공지사항</h2>
+
+    </div>
+
+
+    <div class="notice-list">
+
+      <div class="notice-item">
+
+        <span>2026.10.01</span>
+
+        <strong>
+          10월 제주 투어 참가자를 모집합니다.
+        </strong>
+
+      </div>
+
+
+      <div class="notice-item">
+
+        <span>2026.09.28</span>
+
+        <strong>
+          다이빙 장비 점검 안내
+        </strong>
+
+      </div>
+
+
+      <div class="notice-item">
+
+        <span>2026.09.20</span>
+
+        <strong>
+          신규 회원 모집 안내
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       갤러리
+  ========================== -->
+
+  <section class="section" id="gallery">
+
+    <div class="section-title">
+
+      <p>GALLERY</p>
+
+      <h2>다이빙 갤러리</h2>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <div class="gallery-box">
+        🤿
+      </div>
+
+      <div class="gallery-box">
+        🌊
+      </div>
+
+      <div class="gallery-box">
+        🐠
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       푸터
+  ========================== -->
+
+  <footer>
+
+    <h3>
+      🌊 DIVE INTO THE BLUE
+    </h3>
+
+    <p>
+      우리의 바다, 우리의 다이빙
+    </p>
+
+    <p class="copyright">
+      © 2026 Dive Into The Blue
+    </p>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>

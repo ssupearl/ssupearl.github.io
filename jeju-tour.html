@@ -1,192 +1,533 @@
-
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>제주 가을 투어</title>
 
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
 
-<style>
-.tour-page{
-padding-top:100px;
-}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-.hero-image{
-height:350px;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-}
+  <title>제주 가을 투어 | Dive Into The Blue</title>
 
-.hero-image h1{
-font-size:54px;
-background:rgba(0,0,0,.45);
-padding:20px 35px;
-border-radius:15px;
-}
+  <link
+    rel="stylesheet"
+    href="css/style.css">
 
-.content{
-max-width:1000px;
-margin:auto;
-padding:50px 25px;
-}
 
-.info-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-bottom:40px;
-}
+  <style>
 
-.info-card{
-background:#0b456b;
-padding:25px;
-border-radius:18px;
-}
+    /* =========================
+       투어 상세 페이지
+    ========================== */
 
-.schedule{
-background:#083652;
-padding:30px;
-border-radius:20px;
-margin:40px 0;
-}
+    .tour-page {
 
-.schedule h2{
-margin-bottom:20px;
-}
+      padding-top: 80px;
 
-.schedule li{
-margin:12px 0;
-}
+    }
 
-.checklist{
-background:#0b456b;
-padding:30px;
-border-radius:20px;
-margin-bottom:40px;
-}
 
-.apply-box{
-background:#0f5c88;
-padding:35px;
-border-radius:20px;
-text-align:center;
-}
+    .tour-hero {
 
-.apply-btn{
-display:inline-block;
-margin-top:20px;
-padding:16px 36px;
-background:#00c2ff;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-size:20px;
-font-weight:bold;
-}
+      min-height: 400px;
 
-.back-btn{
-display:inline-block;
-margin-bottom:30px;
-color:#7fdfff;
-text-decoration:none;
-}
-</style>
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      padding: 40px 20px;
+
+      background:
+        linear-gradient(
+          rgba(0, 30, 50, 0.45),
+          rgba(0, 30, 50, 0.75)
+        ),
+        linear-gradient(
+          135deg,
+          #0877a8,
+          #02446c
+        );
+
+    }
+
+
+    .tour-hero h1 {
+
+      font-size: clamp(
+        40px,
+        7vw,
+        70px
+      );
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .tour-content {
+
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding: 70px 25px;
+
+    }
+
+
+    .back-btn {
+
+      display: inline-block;
+
+      margin-bottom: 35px;
+
+      color: #00c2ff;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+    }
+
+
+    /* =========================
+       투어 기본 정보
+    ========================== */
+
+    .tour-info-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 20px;
+
+      margin-bottom: 50px;
+
+    }
+
+
+    .tour-info-box {
+
+      padding: 25px;
+
+      background: #0a4368;
+
+      border-radius: 18px;
+
+    }
+
+
+    .tour-info-box h3 {
+
+      margin-bottom: 10px;
+
+      color: #8be8ff;
+
+    }
+
+
+    /* =========================
+       상세 박스
+    ========================== */
+
+    .detail-box {
+
+      margin-bottom: 30px;
+
+      padding: 35px;
+
+      background: #073650;
+
+      border-radius: 20px;
+
+    }
+
+
+    .detail-box h2 {
+
+      margin-bottom: 20px;
+
+      font-size: 28px;
+
+    }
+
+
+    .detail-box ul {
+
+      padding-left: 25px;
+
+    }
+
+
+    .detail-box li {
+
+      margin: 12px 0;
+
+    }
+
+
+    /* =========================
+       신청 영역
+    ========================== */
+
+    .apply-box {
+
+      padding: 40px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #075b88,
+          #063a59
+        );
+
+      border-radius: 25px;
+
+    }
+
+
+    .apply-box h2 {
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .apply-box p {
+
+      color: #d5f5ff;
+
+    }
+
+
+    .apply-btn {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 16px 40px;
+
+      border-radius: 50px;
+
+      background: #00c2ff;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      font-size: 18px;
+
+    }
+
+
+    /* =========================
+       모바일
+    ========================== */
+
+    @media (max-width: 768px) {
+
+      .tour-page {
+
+        padding-top: 120px;
+
+      }
+
+
+      .tour-info-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+
+      .detail-box {
+
+        padding: 25px;
+
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .tour-info-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+  </style>
 
 </head>
 
+
 <body>
 
-<header class="header">
-<div class="logo">🌊 DIVE INTO THE BLUE</div>
 
-<nav class="nav">
-<a href="index.html">홈</a>
-<a href="#">투어</a>
-<a href="#">일정</a>
-<a href="#">공지</a>
-</nav>
-</header>
+  <!-- =========================
+       상단 메뉴
+  ========================== -->
 
-<div class="tour-page">
+  <header class="header">
 
-<div class="hero-image">
-<h1>제주 가을 투어</h1>
-</div>
+    <div class="logo">
 
-<div class="content">
+      🌊 DIVE INTO THE BLUE
 
-<a href="index.html" class="back-btn">← 메인으로 돌아가기</a>
+    </div>
 
-<div class="info-grid">
 
-<div class="info-card">
-<h3>📅 일정</h3>
-<p>2026.10.16 ~ 10.18</p>
-</div>
+    <nav class="nav">
 
-<div class="info-card">
-<h3>📍 장소</h3>
-<p>제주도 서귀포</p>
-</div>
+      <a href="index.html">
+        홈
+      </a>
 
-<div class="info-card">
-<h3>🤿 다이빙</h3>
-<p>4회 보트다이빙</p>
-</div>
+      <a href="index.html#tour">
+        투어
+      </a>
 
-<div class="info-card">
-<h3>💰 참가비</h3>
-<p>350,000원</p>
-</div>
+      <a href="index.html#notice">
+        공지
+      </a>
 
-</div>
+      <a href="index.html#gallery">
+        갤러리
+      </a>
 
-<div class="schedule">
+    </nav>
 
-<h2>🗓 일정표</h2>
+  </header>
 
-<ul>
-<li>10/16 - 제주 도착 · 체크인 · 야간 식사</li>
-<li>10/17 - 오전 2회 · 오후 2회 다이빙</li>
-<li>10/18 - 관광 후 귀가</li>
-</ul>
 
-</div>
+  <main class="tour-page">
 
-<div class="checklist">
 
-<h2>🎒 준비물</h2>
+    <!-- =========================
+         투어 제목
+    ========================== -->
 
-<ul>
-<li>다이빙 자격증</li>
-<li>로그북</li>
-<li>다이빙 컴퓨터</li>
-<li>DSMB</li>
-<li>개인 장비(또는 대여 신청)</li>
-<li>멀미약</li>
-</ul>
+    <section class="tour-hero">
 
-</div>
+      <h1>
+        제주 가을 투어
+      </h1>
 
-<div class="apply-box">
+    </section>
 
-<h2>👥 모집 현황</h2>
 
-<p>현재 8명 / 정원 12명</p>
+    <div class="tour-content">
 
-<a href="#" class="apply-btn">
-투어 신청하기
-</a>
 
-</div>
+      <a
+        href="index.html"
+        class="back-btn">
 
-</div>
+        ← 메인으로 돌아가기
 
-</div>
+      </a>
+
+
+      <!-- =========================
+           기본 정보
+      ========================== -->
+
+      <div class="tour-info-grid">
+
+
+        <div class="tour-info-box">
+
+          <h3>📅 일정</h3>
+
+          <p>
+            2026.10.16 ~ 10.18
+          </p>
+
+        </div>
+
+
+        <div class="tour-info-box">
+
+          <h3>📍 장소</h3>
+
+          <p>
+            제주도 서귀포
+          </p>
+
+        </div>
+
+
+        <div class="tour-info-box">
+
+          <h3>🤿 다이빙</h3>
+
+          <p>
+            보트다이빙 4회
+          </p>
+
+        </div>
+
+
+        <div class="tour-info-box">
+
+          <h3>💰 참가비</h3>
+
+          <p>
+            350,000원
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- =========================
+           일정
+      ========================== -->
+
+      <div class="detail-box">
+
+        <h2>
+          🗓 일정
+        </h2>
+
+
+        <ul>
+
+          <li>
+            10/16 -
+            제주 도착 · 체크인
+          </li>
+
+          <li>
+            10/17 -
+            오전 2회 · 오후 2회 다이빙
+          </li>
+
+          <li>
+            10/18 -
+            관광 후 귀가
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           준비물
+      ========================== -->
+
+      <div class="detail-box">
+
+        <h2>
+          🎒 준비물
+        </h2>
+
+
+        <ul>
+
+          <li>
+            다이빙 자격증
+          </li>
+
+          <li>
+            로그북
+          </li>
+
+          <li>
+            다이빙 컴퓨터
+          </li>
+
+          <li>
+            DSMB
+          </li>
+
+          <li>
+            개인 장비
+            또는 장비 대여 신청
+          </li>
+
+          <li>
+            멀미약
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           모집
+      ========================== -->
+
+      <div class="apply-box">
+
+        <h2>
+          👥 투어 참가 신청
+        </h2>
+
+
+        <p>
+          현재 8명 / 정원 12명
+        </p>
+
+
+        <!--
+          나중에 Google Forms 주소를
+          이곳에 넣을 예정
+        -->
+
+        <a
+          href="#"
+          class="apply-btn">
+
+          투어 신청하기
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h3>
+      🌊 DIVE INTO THE BLUE
+    </h3>
+
+    <p>
+      우리의 바다, 우리의 다이빙
+    </p>
+
+    <p class="copyright">
+      © 2026 Dive Into The Blue
+    </p>
+
+  </footer>
+
 
 </body>
+
 </html>
