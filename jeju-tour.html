@@ -23,9 +23,7 @@
     ========================== */
 
     .tour-page {
-
       padding-top: 80px;
-
     }
 
 
@@ -206,6 +204,55 @@
     .apply-box p {
 
       color: #d5f5ff;
+
+    }
+
+
+    /* 신청자 수 */
+
+    .member-count {
+
+      margin-top: 15px;
+
+      font-size: 20px;
+
+      font-weight: 700;
+
+      color: #ffffff;
+
+    }
+
+
+    /* 신청자 진행률 */
+
+    .member-progress {
+
+      max-width: 500px;
+
+      height: 12px;
+
+      margin: 15px auto 0;
+
+      background: rgba(255, 255, 255, 0.2);
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+    }
+
+
+    .member-progress-bar {
+
+      width: 0%;
+
+      height: 100%;
+
+      background: #00c2ff;
+
+      border-radius: 20px;
+
+      transition: width 0.5s ease;
 
     }
 
@@ -485,21 +532,39 @@
         </h2>
 
 
-        <p>
-          현재 8명 / 정원 12명
+        <!-- 신청자 수 -->
+
+        <p
+          id="memberCount"
+          class="member-count">
+
+          신청자 수를 불러오는 중...
+
         </p>
 
 
-        <!--
-          나중에 Google Forms 주소를
-          이곳에 넣을 예정
-        -->
+        <!-- 진행률 -->
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXaO0dr0UXh7x-Pntg86cD0OHeU1XsHfDaTIuzFAX_5zpPA/viewform?usp=header"
-   class="btn"
-   target="_blank">
-  투어 신청하기
-</a>
+        <div class="member-progress">
+
+          <div
+            id="progressBar"
+            class="member-progress-bar">
+          </div>
+
+        </div>
+
+
+        <!-- 신청 버튼 -->
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdjXaO0dr0UXh7x-Pntg86cD0OHeU1XsHfDaTIuzFAX_5zpPA/viewform?usp=header"
+          class="apply-btn"
+          target="_blank">
+
+          투어 신청하기
+
+        </a>
 
       </div>
 
@@ -524,6 +589,80 @@
     </p>
 
   </footer>
+
+
+  <!-- =========================
+       신청자 수 자동 연동
+  ========================== -->
+
+  <script>
+
+    const API_URL =
+      "https://script.google.com/macros/s/AKfycby4efl6zBxEF594QYAP7yenVjAZQQIHBZa-aKfplMNbMdtAAt96q2PLOnvHAd_ati-G/exec";
+
+
+    fetch(API_URL)
+
+      .then(response => response.json())
+
+      .then(data => {
+
+        const currentMembers = data.current;
+
+        const totalMembers = data.total;
+
+
+        const percentage =
+          (currentMembers / totalMembers) * 100;
+
+
+        const memberCount =
+          document.getElementById("memberCount");
+
+
+        const progressBar =
+          document.getElementById("progressBar");
+
+
+        if (memberCount) {
+
+          memberCount.textContent =
+            `현재 ${currentMembers}명 / 정원 ${totalMembers}명`;
+
+        }
+
+
+        if (progressBar) {
+
+          progressBar.style.width =
+            percentage + "%";
+
+        }
+
+      })
+
+      .catch(error => {
+
+        console.error(
+          "신청자 수를 불러오지 못했습니다.",
+          error
+        );
+
+
+        const memberCount =
+          document.getElementById("memberCount");
+
+
+        if (memberCount) {
+
+          memberCount.textContent =
+            "신청자 수를 불러올 수 없습니다.";
+
+        }
+
+      });
+
+  </script>
 
 
 </body>
