@@ -61,4 +61,24 @@ fetch(API_URL)
   })
   .catch(error => {
     console.error("신청자 수를 불러오지 못했습니다.", error);
-  });
+  });// =========================
+// 갤러리 확대 기능
+// =========================
+
+function openGallery(imageSrc) {
+  const modal = document.getElementById("galleryModal");
+  const modalImage = document.getElementById("galleryModalImage");
+
+  if (!modal || !modalImage) return;
+
+  modalImage.src = imageSrc;
+  modal.style.display = "flex";
+}
+
+function closeGallery() {
+  const modal = document.getElementById("galleryModal");
+
+  if (!modal) return;
+
+  modal.style.display = "none";
+}

@@ -225,8 +225,10 @@
     <div class="gallery-box">
 
       <img
-        src="./images/Dive.jpg"
-        alt="다이빙 사진">
+  src="./images/Dive.jpg"
+  alt="다이빙 사진"
+  class="gallery-image"
+  onclick="openGallery(this.src)">
 
     </div>
 
@@ -259,6 +261,23 @@
   <!-- JavaScript -->
 
   <script src="js/script.js"></script>
+<!-- =========================
+     갤러리 확대창
+========================== -->
 
+<div id="galleryModal" class="gallery-modal">
+
+  <span
+    class="gallery-close"
+    onclick="closeGallery()">
+    ×
+  </span>
+
+  <img
+    id="galleryModalImage"
+    src=""
+    alt="확대된 다이빙 사진">
+
+</div>
 </body>
 </html>
