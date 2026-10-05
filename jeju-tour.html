@@ -9,7 +9,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>2027년 1월 겨울방학 투어 | Dive Into The Blue</title>
+  <title>2027년 1월 겨울방학 세부 투어 | School Of BLUE</title>
 
   <link
     rel="stylesheet"
@@ -55,6 +55,26 @@
     }
 
 
+    .tour-hero-content {
+      max-width: 900px;
+    }
+
+
+    .tour-hero-small {
+
+      margin-bottom: 15px;
+
+      color: #8be8ff;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      letter-spacing: 3px;
+
+    }
+
+
     .tour-hero h1 {
 
       font-size: clamp(
@@ -64,6 +84,19 @@
       );
 
       letter-spacing: 2px;
+
+      line-height: 1.2;
+
+    }
+
+
+    .tour-hero-subtitle {
+
+      margin-top: 20px;
+
+      font-size: 20px;
+
+      color: #dff8ff;
 
     }
 
@@ -90,6 +123,13 @@
       text-decoration: none;
 
       font-weight: 600;
+
+    }
+
+
+    .back-btn:hover {
+
+      color: #8be8ff;
 
     }
 
@@ -132,6 +172,13 @@
     }
 
 
+    .tour-info-box p {
+
+      color: #ffffff;
+
+    }
+
+
     /* =========================
        상세 박스
     ========================== */
@@ -158,6 +205,13 @@
     }
 
 
+    .detail-box p {
+
+      color: #dff8ff;
+
+    }
+
+
     .detail-box ul {
 
       padding-left: 25px;
@@ -169,11 +223,13 @@
 
       margin: 12px 0;
 
+      color: #e4f6ff;
+
     }
 
 
     /* =========================
-       신청 영역
+       모집 안내
     ========================== */
 
     .apply-box {
@@ -201,14 +257,16 @@
     }
 
 
-    .apply-box p {
+    .apply-box > p {
 
       color: #d5f5ff;
 
     }
 
 
-    /* 신청자 수 */
+    /* =========================
+       신청자 수
+    ========================== */
 
     .member-count {
 
@@ -223,7 +281,9 @@
     }
 
 
-    /* 신청자 진행률 */
+    /* =========================
+       신청자 진행률
+    ========================== */
 
     .member-progress {
 
@@ -233,7 +293,13 @@
 
       margin: 15px auto 0;
 
-      background: rgba(255, 255, 255, 0.2);
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.2
+        );
 
       border-radius: 20px;
 
@@ -252,10 +318,15 @@
 
       border-radius: 20px;
 
-      transition: width 0.5s ease;
+      transition:
+        width 0.5s ease;
 
     }
 
+
+    /* =========================
+       신청 버튼
+    ========================== */
 
     .apply-btn {
 
@@ -277,6 +348,17 @@
 
       font-size: 18px;
 
+      transition: 0.3s;
+
+    }
+
+
+    .apply-btn:hover {
+
+      background: #00a8e8;
+
+      transform: translateY(-2px);
+
     }
 
 
@@ -295,7 +377,8 @@
 
       .tour-info-grid {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+          1fr 1fr;
 
       }
 
@@ -303,6 +386,13 @@
       .detail-box {
 
         padding: 25px;
+
+      }
+
+
+      .tour-hero-subtitle {
+
+        font-size: 17px;
 
       }
 
@@ -314,6 +404,20 @@
       .tour-info-grid {
 
         grid-template-columns: 1fr;
+
+      }
+
+
+      .tour-hero h1 {
+
+        font-size: 40px;
+
+      }
+
+
+      .apply-box {
+
+        padding: 30px 20px;
 
       }
 
@@ -372,15 +476,32 @@
 
     <section class="tour-hero">
 
-      <h1>
-        2027년 1월 겨울방학 투어
-      </h1>
+      <div class="tour-hero-content">
+
+        <p class="tour-hero-small">
+          SCHOOL OF BLUE
+        </p>
+
+
+        <h1>
+          2027년 1월<br>
+          겨울방학 투어
+        </h1>
+
+
+        <p class="tour-hero-subtitle">
+          필리핀 세부 보트다이빙 투어
+        </p>
+
+      </div>
 
     </section>
 
 
     <div class="tour-content">
 
+
+      <!-- 메인으로 돌아가기 -->
 
       <a
         href="index.html"
@@ -400,10 +521,13 @@
 
         <div class="tour-info-box">
 
-          <h3>📅 일정</h3>
+          <h3>
+            📅 일정
+          </h3>
 
           <p>
-            2027.01.25.(월) ~ 01.29.(금)
+            2027.01.25.(월)<br>
+            ~ 01.29.(금)
           </p>
 
         </div>
@@ -411,7 +535,9 @@
 
         <div class="tour-info-box">
 
-          <h3>📍 장소</h3>
+          <h3>
+            📍 장소
+          </h3>
 
           <p>
             필리핀 세부
@@ -422,7 +548,9 @@
 
         <div class="tour-info-box">
 
-          <h3>🤿 다이빙</h3>
+          <h3>
+            🤿 다이빙
+          </h3>
 
           <p>
             보트다이빙 10회
@@ -433,14 +561,47 @@
 
         <div class="tour-info-box">
 
-          <h3>💰 참가비</h3>
+          <h3>
+            👥 모집 인원
+          </h3>
 
           <p>
-            350,000원
+            총 24명
           </p>
 
         </div>
 
+
+      </div>
+
+
+      <!-- =========================
+           투어 소개
+      ========================== -->
+
+      <div class="detail-box">
+
+        <h2>
+          🌊 투어 소개
+        </h2>
+
+
+        <p>
+
+          2027년 겨울방학을 맞아
+          필리핀 세부에서
+          함께 다이빙하는 투어입니다.
+
+        </p>
+
+
+        <p style="margin-top: 15px;">
+
+          총 10회의 보트다이빙을 중심으로
+          세부의 다양한 다이빙 포인트를
+          함께 경험할 예정입니다.
+
+        </p>
 
       </div>
 
@@ -452,25 +613,85 @@
       <div class="detail-box">
 
         <h2>
-          🗓 일정
+          🗓 투어 일정
         </h2>
 
 
         <ul>
 
           <li>
-            10/16 -
-            제주 도착 · 체크인
+            <strong>1월 25일(월)</strong>
+            -
+            세부 이동 및 체크인
           </li>
 
           <li>
-            10/17 -
-            오전 2회 · 오후 2회 다이빙
+            <strong>1월 26일(화)</strong>
+            -
+            보트다이빙 일정
           </li>
 
           <li>
-            10/18 -
-            관광 후 귀가
+            <strong>1월 27일(수)</strong>
+            -
+            보트다이빙 일정
+          </li>
+
+          <li>
+            <strong>1월 28일(목)</strong>
+            -
+            보트다이빙 일정
+          </li>
+
+          <li>
+            <strong>1월 29일(금)</strong>
+            -
+            귀국
+          </li>
+
+        </ul>
+
+
+        <p style="margin-top: 20px;">
+
+          ※ 세부 일정과 다이빙 포인트는
+          현지 상황 및 보트 운영 상황에 따라
+          변경될 수 있습니다.
+
+        </p>
+
+      </div>
+
+
+      <!-- =========================
+           다이빙
+      ========================== -->
+
+      <div class="detail-box">
+
+        <h2>
+          🤿 다이빙 안내
+        </h2>
+
+
+        <ul>
+
+          <li>
+            총 <strong>보트다이빙 10회</strong>
+          </li>
+
+          <li>
+            세부 주요 다이빙 포인트 진행 예정
+          </li>
+
+          <li>
+            기상 및 해상 상황에 따라
+            일정이 변경될 수 있습니다.
+          </li>
+
+          <li>
+            참가자의 자격 및 다이빙 경험을
+            고려하여 안전하게 진행합니다.
           </li>
 
         </ul>
@@ -496,7 +717,7 @@
           </li>
 
           <li>
-            로그북
+            로그북 또는 다이빙 기록
           </li>
 
           <li>
@@ -504,16 +725,20 @@
           </li>
 
           <li>
-            DSMB
+            DSMB 및 릴
           </li>
 
           <li>
-            개인 장비
+            개인 다이빙 장비
             또는 장비 대여 신청
           </li>
 
           <li>
-            멀미약
+            여권 및 여행 관련 서류
+          </li>
+
+          <li>
+            멀미약 및 개인 상비약
           </li>
 
         </ul>
@@ -522,7 +747,45 @@
 
 
       <!-- =========================
-           모집
+           참가 안내
+      ========================== -->
+
+      <div class="detail-box">
+
+        <h2>
+          📌 참가 안내
+        </h2>
+
+
+        <ul>
+
+          <li>
+            모집 정원은 총 <strong>24명</strong>입니다.
+          </li>
+
+          <li>
+            신청 후 세부 일정 및 비용에 대한
+            별도 안내가 진행됩니다.
+          </li>
+
+          <li>
+            항공권, 숙박, 식사,
+            장비 렌탈 등의 포함 여부는
+            추후 최종 안내합니다.
+          </li>
+
+          <li>
+            신청 인원이 모집 정원을 초과할 경우
+            신청이 조기 마감될 수 있습니다.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           모집 및 신청
       ========================== -->
 
       <div class="apply-box">
@@ -530,6 +793,12 @@
         <h2>
           👥 투어 참가 신청
         </h2>
+
+
+        <p>
+          현재 모집 현황을 확인하고
+          참가 신청을 진행해주세요.
+        </p>
 
 
         <!-- 신청자 수 -->
@@ -574,18 +843,24 @@
   </main>
 
 
+  <!-- =========================
+       푸터
+  ========================== -->
+
   <footer>
 
     <h3>
-      🌊 School Of Blue
+      🌊 School Of BLUE
     </h3>
+
 
     <p>
       우리의 교실 우리의 바다 우리의 다이빙
     </p>
 
+
     <p class="copyright">
-      © 2026 School Of Blue
+      © 2026 School Of BLUE
     </p>
 
   </footer>
@@ -607,21 +882,44 @@
 
       .then(data => {
 
-        const currentMembers = data.current;
 
-        const totalMembers = data.total;
+        const currentMembers =
+          Number(data.current) || 0;
 
+
+        const totalMembers =
+          Number(data.total) || 24;
+
+
+        /* =========================
+           모집률 계산
+        ========================== */
 
         const percentage =
-          (currentMembers / totalMembers) * 100;
+          Math.min(
+            (currentMembers / totalMembers) * 100,
+            100
+          );
 
+
+        /* =========================
+           신청자 숫자
+        ========================== */
 
         const memberCount =
-          document.getElementById("memberCount");
+          document.getElementById(
+            "memberCount"
+          );
 
+
+        /* =========================
+           진행률
+        ========================== */
 
         const progressBar =
-          document.getElementById("progressBar");
+          document.getElementById(
+            "progressBar"
+          );
 
 
         if (memberCount) {
@@ -641,6 +939,7 @@
 
       })
 
+
       .catch(error => {
 
         console.error(
@@ -650,7 +949,9 @@
 
 
         const memberCount =
-          document.getElementById("memberCount");
+          document.getElementById(
+            "memberCount"
+          );
 
 
         if (memberCount) {
