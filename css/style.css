@@ -654,4 +654,24 @@ footer .copyright {
 
   }
 
+}/* =========================
+   갤러리 사진
+========================= */
+
+.gallery-box {
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-box:hover img {
+  transform: scale(1.05);
 }
