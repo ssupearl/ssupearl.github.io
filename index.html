@@ -206,35 +206,36 @@
   </section>
 
 
-<!-- =========================
-     갤러리
-========================== -->
+  <!-- =========================
+       갤러리
+  ========================== -->
 
-<section class="section" id="gallery">
+  <section class="section" id="gallery">
 
-  <div class="section-title">
+    <div class="section-title">
 
-    <p>GALLERY</p>
+      <p>GALLERY</p>
 
-    <h2>다이빙 갤러리</h2>
-
-  </div>
-
-  <div class="gallery-grid">
-
-    <div class="gallery-box">
-
-      <img
-  src="./images/Dive.jpg"
-  alt="다이빙 사진"
-  class="gallery-image"
-  onclick="openGallery(this.src)">
+      <h2>다이빙 갤러리</h2>
 
     </div>
 
-  </div>
 
-</section>
+    <div class="gallery-grid">
+
+      <div class="gallery-box">
+
+        <img
+          src="./images/Dive.jpg"
+          alt="다이빙 사진"
+          class="gallery-image"
+          onclick="openGallery(this.src)">
+
+      </div>
+
+    </div>
+
+  </section>
 
 
   <!-- =========================
@@ -258,26 +259,33 @@
   </footer>
 
 
-  <!-- JavaScript -->
+  <!-- =========================
+       갤러리 확대창
+  ========================== -->
+
+  <div
+    id="galleryModal"
+    class="gallery-modal">
+
+    <span
+      class="gallery-close"
+      onclick="closeGallery()">
+      ×
+    </span>
+
+    <img
+      id="galleryModalImage"
+      src=""
+      alt="확대된 다이빙 사진">
+
+  </div>
+
+
+  <!-- =========================
+       JavaScript
+  ========================== -->
 
   <script src="js/script.js"></script>
-<!-- =========================
-     갤러리 확대창
-========================== -->
 
-<div id="galleryModal" class="gallery-modal">
-
-  <span
-    class="gallery-close"
-    onclick="closeGallery()">
-    ×
-  </span>
-
-  <img
-    id="galleryModalImage"
-    src=""
-    alt="확대된 다이빙 사진">
-
-</div>
 </body>
 </html>
