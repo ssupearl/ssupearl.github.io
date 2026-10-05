@@ -407,7 +407,7 @@
 
 
   <!-- =========================
-       갤러리
+       다이빙 갤러리
   ========================== -->
 
   <section
@@ -426,35 +426,99 @@
         다이빙 갤러리
       </h2>
 
+
+      <p class="gallery-description">
+        우리의 바다, 우리의 순간
+      </p>
+
     </div>
 
 
-    <div class="gallery-grid">
+    <div class="gallery-feature">
 
 
-      <div class="gallery-box">
+      <!-- 메인 사진 -->
+
+      <div
+        class="gallery-main">
 
         <img
           src="./images/Dive.jpg"
-          alt="다이빙 사진 1"
-          class="gallery-image"
+          alt="School Of BLUE 다이빙 메인 사진"
           onclick="openGallery(this.src)">
+
+
+        <div class="gallery-caption">
+
+          <span>
+            SCHOOL OF BLUE
+          </span>
+
+          <strong>
+            우리의 바다
+          </strong>
+
+        </div>
 
       </div>
 
 
-      <div class="gallery-box">
+      <!-- 서브 사진 -->
 
-        <img
-          src="./images/Dive2.jpg"
-          alt="다이빙 사진 2"
-          class="gallery-image"
-          onclick="openGallery(this.src)">
+      <div class="gallery-side">
+
+
+        <div
+          class="gallery-side-item">
+
+          <img
+            src="./images/Dive2.jpg"
+            alt="School Of BLUE 다이빙 사진"
+            onclick="openGallery(this.src)">
+
+
+          <div class="gallery-side-caption">
+
+            <span>
+              DIVING
+            </span>
+
+            <strong>
+              우리의 다이빙
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="gallery-side-item gallery-empty">
+
+          <div class="gallery-placeholder">
+
+            <span>
+              🌊
+            </span>
+
+            <strong>
+              More Blue
+            </strong>
+
+            <p>
+              새로운 다이빙 사진이<br>
+              곧 추가됩니다.
+            </p>
+
+          </div>
+
+        </div>
+
 
       </div>
-
 
     </div>
+
 
   </section>
 
@@ -463,21 +527,116 @@
        푸터
   ========================== -->
 
-  <footer>
-
-    <h3>
-      🌊 School Of BLUE
-    </h3>
+  <footer class="site-footer">
 
 
-    <p>
-      우리의 교실 우리의 바다 우리의 다이빙
-    </p>
+    <div class="footer-inner">
 
 
-    <p class="copyright">
-      © 2026 School Of BLUE
-    </p>
+      <!-- 클럽 소개 -->
+
+      <div class="footer-brand">
+
+        <h3>
+          🌊 School Of BLUE
+        </h3>
+
+
+        <p class="footer-slogan">
+          우리의 교실 우리의 바다 우리의 다이빙
+        </p>
+
+
+        <p class="footer-description">
+          선생님들이 함께 만들고 함께 즐기는<br>
+          다이빙 클럽 School Of BLUE
+        </p>
+
+      </div>
+
+
+      <!-- 빠른 메뉴 -->
+
+      <div class="footer-menu">
+
+        <h4>
+          QUICK MENU
+        </h4>
+
+
+        <a href="index.html">
+          홈
+        </a>
+
+
+        <a href="#tour">
+          다음 투어
+        </a>
+
+
+        <a href="#notice">
+          공지사항
+        </a>
+
+
+        <a href="#gallery">
+          갤러리
+        </a>
+
+      </div>
+
+
+      <!-- 다음 투어 정보 -->
+
+      <div class="footer-tour">
+
+        <h4>
+          NEXT TOUR
+        </h4>
+
+
+        <strong>
+          2027 겨울방학 투어
+        </strong>
+
+
+        <p>
+          📍 필리핀 세부
+        </p>
+
+
+        <p>
+          📅 2027.01.25 ~ 01.29
+        </p>
+
+
+        <a href="jeju-tour.html">
+          투어 자세히 보기 →
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- 하단 -->
+
+    <div class="footer-bottom">
+
+
+      <span>
+        © 2026 School Of BLUE
+      </span>
+
+
+      <span>
+        Teacher`s Dive Club Since 2026
+      </span>
+
+
+    </div>
+
 
   </footer>
 
