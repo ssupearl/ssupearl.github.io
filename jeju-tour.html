@@ -9,421 +9,13 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>2027년 1월 겨울방학 세부 투어 | School Of BLUE</title>
+  <title>
+    2027년 1월 겨울방학 세부 투어 | School Of BLUE
+  </title>
 
   <link
     rel="stylesheet"
     href="css/style.css">
-
-
-  <style>
-
-    /* =========================
-       투어 상세 페이지
-    ========================== */
-
-    .tour-page {
-      padding-top: 80px;
-    }
-
-
-    .tour-hero {
-
-      min-height: 400px;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-      text-align: center;
-
-      padding: 40px 20px;
-
-      background:
-        linear-gradient(
-          rgba(0, 30, 50, 0.45),
-          rgba(0, 30, 50, 0.75)
-        ),
-        linear-gradient(
-          135deg,
-          #0877a8,
-          #02446c
-        );
-
-    }
-
-
-    .tour-hero-content {
-      max-width: 900px;
-    }
-
-
-    .tour-hero-small {
-
-      margin-bottom: 15px;
-
-      color: #8be8ff;
-
-      font-size: 15px;
-
-      font-weight: 700;
-
-      letter-spacing: 3px;
-
-    }
-
-
-    .tour-hero h1 {
-
-      font-size: clamp(
-        40px,
-        7vw,
-        70px
-      );
-
-      letter-spacing: 2px;
-
-      line-height: 1.2;
-
-    }
-
-
-    .tour-hero-subtitle {
-
-      margin-top: 20px;
-
-      font-size: 20px;
-
-      color: #dff8ff;
-
-    }
-
-
-    .tour-content {
-
-      max-width: 1100px;
-
-      margin: 0 auto;
-
-      padding: 70px 25px;
-
-    }
-
-
-    .back-btn {
-
-      display: inline-block;
-
-      margin-bottom: 35px;
-
-      color: #00c2ff;
-
-      text-decoration: none;
-
-      font-weight: 600;
-
-    }
-
-
-    .back-btn:hover {
-
-      color: #8be8ff;
-
-    }
-
-
-    /* =========================
-       투어 기본 정보
-    ========================== */
-
-    .tour-info-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 20px;
-
-      margin-bottom: 50px;
-
-    }
-
-
-    .tour-info-box {
-
-      padding: 25px;
-
-      background: #0a4368;
-
-      border-radius: 18px;
-
-    }
-
-
-    .tour-info-box h3 {
-
-      margin-bottom: 10px;
-
-      color: #8be8ff;
-
-    }
-
-
-    .tour-info-box p {
-
-      color: #ffffff;
-
-    }
-
-
-    /* =========================
-       상세 박스
-    ========================== */
-
-    .detail-box {
-
-      margin-bottom: 30px;
-
-      padding: 35px;
-
-      background: #073650;
-
-      border-radius: 20px;
-
-    }
-
-
-    .detail-box h2 {
-
-      margin-bottom: 20px;
-
-      font-size: 28px;
-
-    }
-
-
-    .detail-box p {
-
-      color: #dff8ff;
-
-    }
-
-
-    .detail-box ul {
-
-      padding-left: 25px;
-
-    }
-
-
-    .detail-box li {
-
-      margin: 12px 0;
-
-      color: #e4f6ff;
-
-    }
-
-
-    /* =========================
-       모집 안내
-    ========================== */
-
-    .apply-box {
-
-      padding: 40px;
-
-      text-align: center;
-
-      background:
-        linear-gradient(
-          135deg,
-          #075b88,
-          #063a59
-        );
-
-      border-radius: 25px;
-
-    }
-
-
-    .apply-box h2 {
-
-      margin-bottom: 10px;
-
-    }
-
-
-    .apply-box > p {
-
-      color: #d5f5ff;
-
-    }
-
-
-    /* =========================
-       신청자 수
-    ========================== */
-
-    .member-count {
-
-      margin-top: 15px;
-
-      font-size: 20px;
-
-      font-weight: 700;
-
-      color: #ffffff;
-
-    }
-
-
-    /* =========================
-       신청자 진행률
-    ========================== */
-
-    .member-progress {
-
-      max-width: 500px;
-
-      height: 12px;
-
-      margin: 15px auto 0;
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.2
-        );
-
-      border-radius: 20px;
-
-      overflow: hidden;
-
-    }
-
-
-    .member-progress-bar {
-
-      width: 0%;
-
-      height: 100%;
-
-      background: #00c2ff;
-
-      border-radius: 20px;
-
-      transition:
-        width 0.5s ease;
-
-    }
-
-
-    /* =========================
-       신청 버튼
-    ========================== */
-
-    .apply-btn {
-
-      display: inline-block;
-
-      margin-top: 25px;
-
-      padding: 16px 40px;
-
-      border-radius: 50px;
-
-      background: #00c2ff;
-
-      color: white;
-
-      text-decoration: none;
-
-      font-weight: 700;
-
-      font-size: 18px;
-
-      transition: 0.3s;
-
-    }
-
-
-    .apply-btn:hover {
-
-      background: #00a8e8;
-
-      transform: translateY(-2px);
-
-    }
-
-
-    /* =========================
-       모바일
-    ========================== */
-
-    @media (max-width: 768px) {
-
-      .tour-page {
-
-        padding-top: 120px;
-
-      }
-
-
-      .tour-info-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
-      }
-
-
-      .detail-box {
-
-        padding: 25px;
-
-      }
-
-
-      .tour-hero-subtitle {
-
-        font-size: 17px;
-
-      }
-
-    }
-
-
-    @media (max-width: 500px) {
-
-      .tour-info-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-
-      .tour-hero h1 {
-
-        font-size: 40px;
-
-      }
-
-
-      .apply-box {
-
-        padding: 30px 20px;
-
-      }
-
-    }
-
-  </style>
 
 </head>
 
@@ -438,9 +30,7 @@
   <header class="header">
 
     <div class="logo">
-
       🌊 School Of Blue
-
     </div>
 
 
@@ -467,20 +57,25 @@
   </header>
 
 
-  <main class="tour-page">
+
+  <!-- =========================
+       투어 상세
+  ========================== -->
+
+  <main>
 
 
     <!-- =========================
-         투어 제목
+         투어 헤더
     ========================== -->
 
-    <section class="tour-hero">
+    <section class="tour-detail-hero">
 
-      <div class="tour-hero-content">
+      <div class="tour-detail-hero-content">
 
-        <p class="tour-hero-small">
-          SCHOOL OF BLUE
-        </p>
+        <span class="tour-label">
+          🌊 SCHOOL OF BLUE
+        </span>
 
 
         <h1>
@@ -489,7 +84,7 @@
         </h1>
 
 
-        <p class="tour-hero-subtitle">
+        <p>
           필리핀 세부 보트다이빙 투어
         </p>
 
@@ -498,46 +93,57 @@
     </section>
 
 
-    <div class="tour-content">
 
+    <!-- =========================
+         투어 기본 정보
+    ========================== -->
 
-      <!-- 메인으로 돌아가기 -->
+    <section class="section">
 
-      <a
-        href="index.html"
-        class="back-btn">
+      <div class="section-title">
 
-        ← 메인으로 돌아가기
+        <p>
+          TOUR INFORMATION
+        </p>
 
-      </a>
+        <h2>
+          투어 안내
+        </h2>
 
+      </div>
 
-      <!-- =========================
-           기본 정보
-      ========================== -->
 
       <div class="tour-info-grid">
 
 
-        <div class="tour-info-box">
+        <div class="tour-info-card">
 
-          <h3>
-            📅 일정
-          </h3>
+          <span>
+            📅
+          </span>
+
+          <strong>
+            일정
+          </strong>
 
           <p>
-            2027.01.25.(월)<br>
-            ~ 01.29.(금)
+            2027.01.25(월)
+            ~
+            01.29.(금)
           </p>
 
         </div>
 
 
-        <div class="tour-info-box">
+        <div class="tour-info-card">
 
-          <h3>
-            📍 장소
-          </h3>
+          <span>
+            📍
+          </span>
+
+          <strong>
+            장소
+          </strong>
 
           <p>
             필리핀 세부
@@ -546,11 +152,15 @@
         </div>
 
 
-        <div class="tour-info-box">
+        <div class="tour-info-card">
 
-          <h3>
-            🤿 다이빙
-          </h3>
+          <span>
+            🤿
+          </span>
+
+          <strong>
+            다이빙
+          </strong>
 
           <p>
             보트다이빙 10회
@@ -559,11 +169,15 @@
         </div>
 
 
-        <div class="tour-info-box">
+        <div class="tour-info-card">
 
-          <h3>
-            👥 모집 인원
-          </h3>
+          <span>
+            👥
+          </span>
+
+          <strong>
+            모집 인원
+          </strong>
 
           <p>
             총 24명
@@ -574,252 +188,377 @@
 
       </div>
 
+    </section>
 
-      <!-- =========================
-           투어 소개
-      ========================== -->
 
-      <div class="detail-box">
+
+    <!-- =========================
+         투어 소개
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          ABOUT THE TOUR
+        </p>
 
         <h2>
-          🌊 투어 소개
+          투어 소개
         </h2>
+
+      </div>
+
+
+      <div class="tour-detail-content">
+
+        <p>
+
+          School Of BLUE의
+          2027년 겨울방학 첫 해외 다이빙 투어입니다.
+
+        </p>
 
 
         <p>
 
-          2027년 겨울방학을 맞아
-          필리핀 세부에서
-          함께 다이빙하는 투어입니다.
+          따뜻한 필리핀 세부의 바다에서
+          함께 다이빙하며 즐거운 시간을 만들어갑니다.
 
         </p>
-
-
-        <p style="margin-top: 15px;">
-
-          총 10회의 보트다이빙을 중심으로
-          세부의 다양한 다이빙 포인트를
-          함께 경험할 예정입니다.
-
-        </p>
-
-      </div>
-
-
-      <!-- =========================
-           일정
-      ========================== -->
-
-      <div class="detail-box">
-
-        <h2>
-          🗓 투어 일정
-        </h2>
-
-
-        <ul>
-
-          <li>
-            <strong>1월 25일(월)</strong>
-            -
-            세부 이동 및 체크인
-          </li>
-
-          <li>
-            <strong>1월 26일(화)</strong>
-            -
-            보트다이빙 일정
-          </li>
-
-          <li>
-            <strong>1월 27일(수)</strong>
-            -
-            보트다이빙 일정
-          </li>
-
-          <li>
-            <strong>1월 28일(목)</strong>
-            -
-            보트다이빙 일정
-          </li>
-
-          <li>
-            <strong>1월 29일(금)</strong>
-            -
-            귀국
-          </li>
-
-        </ul>
-
-
-        <p style="margin-top: 20px;">
-
-          ※ 세부 일정과 다이빙 포인트는
-          현지 상황 및 보트 운영 상황에 따라
-          변경될 수 있습니다.
-
-        </p>
-
-      </div>
-
-
-      <!-- =========================
-           다이빙
-      ========================== -->
-
-      <div class="detail-box">
-
-        <h2>
-          🤿 다이빙 안내
-        </h2>
-
-
-        <ul>
-
-          <li>
-            총 <strong>보트다이빙 10회</strong>
-          </li>
-
-          <li>
-            세부 주요 다이빙 포인트 진행 예정
-          </li>
-
-          <li>
-            기상 및 해상 상황에 따라
-            일정이 변경될 수 있습니다.
-          </li>
-
-          <li>
-            참가자의 자격 및 다이빙 경험을
-            고려하여 안전하게 진행합니다.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- =========================
-           준비물
-      ========================== -->
-
-      <div class="detail-box">
-
-        <h2>
-          🎒 준비물
-        </h2>
-
-
-        <ul>
-
-          <li>
-            다이빙 자격증
-          </li>
-
-          <li>
-            로그북 또는 다이빙 기록
-          </li>
-
-          <li>
-            다이빙 컴퓨터
-          </li>
-
-          <li>
-            DSMB 및 릴
-          </li>
-
-          <li>
-            개인 다이빙 장비
-            또는 장비 대여 신청
-          </li>
-
-          <li>
-            여권 및 여행 관련 서류
-          </li>
-
-          <li>
-            멀미약 및 개인 상비약
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- =========================
-           참가 안내
-      ========================== -->
-
-      <div class="detail-box">
-
-        <h2>
-          📌 참가 안내
-        </h2>
-
-
-        <ul>
-
-          <li>
-            모집 정원은 총 <strong>24명</strong>입니다.
-          </li>
-
-          <li>
-            신청 후 세부 일정 및 비용에 대한
-            별도 안내가 진행됩니다.
-          </li>
-
-          <li>
-            항공권, 숙박, 식사,
-            장비 렌탈 등의 포함 여부는
-            추후 최종 안내합니다.
-          </li>
-
-          <li>
-            신청 인원이 모집 정원을 초과할 경우
-            신청이 조기 마감될 수 있습니다.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- =========================
-           모집 및 신청
-      ========================== -->
-
-      <div class="apply-box">
-
-        <h2>
-          👥 투어 참가 신청
-        </h2>
 
 
         <p>
-          현재 모집 현황을 확인하고
-          참가 신청을 진행해주세요.
+
+          보트다이빙을 중심으로
+          총 10회의 다이빙을 진행할 예정입니다.
+
         </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         일정
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          SCHEDULE
+        </p>
+
+        <h2>
+          일정
+        </h2>
+
+      </div>
+
+
+      <div class="tour-schedule">
+
+
+        <div class="schedule-item">
+
+          <div class="schedule-day">
+            DAY 1
+          </div>
+
+          <div class="schedule-content">
+
+            <strong>
+              1월 25일
+            </strong>
+
+            <p>
+              세부 이동 및 체크인
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <div class="schedule-day">
+            DAY 2
+          </div>
+
+          <div class="schedule-content">
+
+            <strong>
+              1월 26일
+            </strong>
+
+            <p>
+              보트다이빙
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <div class="schedule-day">
+            DAY 3
+          </div>
+
+          <div class="schedule-content">
+
+            <strong>
+              1월 27일
+            </strong>
+
+            <p>
+              보트다이빙
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <div class="schedule-day">
+            DAY 4
+          </div>
+
+          <div class="schedule-content">
+
+            <strong>
+              1월 28일
+            </strong>
+
+            <p>
+              보트다이빙
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <div class="schedule-day">
+            DAY 5
+          </div>
+
+          <div class="schedule-content">
+
+            <strong>
+              1월 29일
+            </strong>
+
+            <p>
+              체크아웃 및 귀국
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         다이빙 정보
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          DIVING
+        </p>
+
+        <h2>
+          다이빙 정보
+        </h2>
+
+      </div>
+
+
+      <div class="tour-detail-content">
+
+        <p>
+          🤿 보트다이빙 총 10회
+        </p>
+
+        <p>
+          🌊 세부 주요 다이빙 포인트
+        </p>
+
+        <p>
+          👥 그룹 다이빙 진행
+        </p>
+
+        <p>
+          📋 세부적인 다이빙 일정은
+          현지 상황에 따라 조정될 수 있습니다.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         장비
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          EQUIPMENT
+        </p>
+
+        <h2>
+          장비 안내
+        </h2>
+
+      </div>
+
+
+      <div class="tour-detail-content">
+
+        <p>
+          개인 다이빙 장비를 사용하는 것을 기본으로 합니다.
+        </p>
+
+        <p>
+          장비 대여가 필요한 경우
+          사전에 알려주시기 바랍니다.
+        </p>
+
+        <p>
+          투어 전 개인 장비의 상태를
+          반드시 점검해주세요.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         참가 안내
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          PARTICIPATION
+        </p>
+
+        <h2>
+          참가 안내
+        </h2>
+
+      </div>
+
+
+      <div class="tour-detail-content">
+
+        <p>
+          해외 다이빙 여행에 필요한
+          여권 및 여행 준비물을 미리 확인해주세요.
+        </p>
+
+        <p>
+          세부적인 일정과 준비사항은
+          참가자 확정 후 별도로 안내합니다.
+        </p>
+
+        <p>
+          투어 참가 전 다이빙 가능 여부와
+          개인 건강 상태를 스스로 확인해주세요.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         신청 현황
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <p>
+          APPLICATION
+        </p>
+
+        <h2>
+          참가 신청
+        </h2>
+
+      </div>
+
+
+      <div class="tour-apply-box">
+
+
+        <!-- 모집 상태 -->
+
+        <div class="progress-header">
+
+          <span>
+            모집 현황
+          </span>
+
+
+          <span id="tourRecruitStatus">
+            🟢 모집중
+          </span>
+
+        </div>
+
+
+        <!-- 진행바 -->
+
+        <div class="progress">
+
+          <div
+            class="progress-bar"
+            id="tourProgressBar">
+          </div>
+
+        </div>
 
 
         <!-- 신청자 수 -->
 
-        <p
-          id="memberCount"
+        <div
+          id="tourMemberCount"
           class="member-count">
 
-          신청자 수를 불러오는 중...
-
-        </p>
-
-
-        <!-- 진행률 -->
-
-        <div class="member-progress">
-
-          <div
-            id="progressBar"
-            class="member-progress-bar">
-          </div>
+          0 / 24명 신청
 
         </div>
 
@@ -828,11 +567,123 @@
 
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdjXaO0dr0UXh7x-Pntg86cD0OHeU1XsHfDaTIuzFAX_5zpPA/viewform?usp=header"
-          class="apply-btn"
-          target="_blank">
+          target="_blank"
+          class="tour-btn"
+          id="tourApplyButton">
 
-          투어 신청하기
+          투어 참가 신청하기
 
+          <span>
+            →
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       푸터
+  ========================== -->
+
+  <footer class="site-footer">
+
+
+    <div class="footer-inner">
+
+
+      <!-- 클럽 소개 -->
+
+      <div class="footer-brand">
+
+        <h3>
+          🌊 School Of BLUE
+        </h3>
+
+
+        <p class="footer-slogan">
+
+          우리의 교실 우리의 바다 우리의 다이빙
+
+        </p>
+
+
+        <p class="footer-description">
+
+          선생님들이 함께 만들고 함께 즐기는<br>
+          다이빙 클럽 School Of BLUE
+
+        </p>
+
+      </div>
+
+
+
+      <!-- 빠른 메뉴 -->
+
+      <div class="footer-menu">
+
+        <h4>
+          QUICK MENU
+        </h4>
+
+
+        <a href="index.html">
+          홈
+        </a>
+
+
+        <a href="index.html#tour">
+          다음 투어
+        </a>
+
+
+        <a href="index.html#notice">
+          공지사항
+        </a>
+
+
+        <a href="index.html#gallery">
+          갤러리
+        </a>
+
+      </div>
+
+
+
+      <!-- 다음 투어 -->
+
+      <div class="footer-tour">
+
+        <h4>
+          NEXT TOUR
+        </h4>
+
+
+        <strong>
+          2027 겨울방학 투어
+        </strong>
+
+
+        <p>
+          📍 필리핀 세부
+        </p>
+
+
+        <p>
+          📅 2027.01.25 ~ 01.29
+        </p>
+
+
+        <a href="jeju-tour.html">
+          투어 자세히 보기 →
         </a>
 
       </div>
@@ -840,34 +691,30 @@
 
     </div>
 
-  </main>
 
 
-  <!-- =========================
-       푸터
-  ========================== -->
+    <!-- 하단 -->
 
-  <footer>
+    <div class="footer-bottom">
 
-    <h3>
-      🌊 School Of BLUE
-    </h3>
+      <span>
+        © 2026 School Of BLUE
+      </span>
 
 
-    <p>
-      우리의 교실 우리의 바다 우리의 다이빙
-    </p>
+      <span>
+        Teacher`s Dive Club Since 2026
+      </span>
 
+    </div>
 
-    <p class="copyright">
-      © 2026 School Of BLUE
-    </p>
 
   </footer>
 
 
+
   <!-- =========================
-       신청자 수 자동 연동
+       신청자 수 API
   ========================== -->
 
   <script>
@@ -883,17 +730,25 @@
       .then(data => {
 
 
+        // =========================
+        // 신청자 수
+        // =========================
+
         const currentMembers =
           Number(data.current) || 0;
 
+
+        // =========================
+        // 총 모집 인원
+        // =========================
 
         const totalMembers =
           Number(data.total) || 24;
 
 
-        /* =========================
-           모집률 계산
-        ========================== */
+        // =========================
+        // 모집률
+        // =========================
 
         const percentage =
           Math.min(
@@ -902,38 +757,109 @@
           );
 
 
-        /* =========================
-           신청자 숫자
-        ========================== */
-
-        const memberCount =
-          document.getElementById(
-            "memberCount"
-          );
-
-
-        /* =========================
-           진행률
-        ========================== */
+        // =========================
+        // 진행바
+        // =========================
 
         const progressBar =
           document.getElementById(
-            "progressBar"
+            "tourProgressBar"
           );
-
-
-        if (memberCount) {
-
-          memberCount.textContent =
-            `현재 ${currentMembers}명 / 정원 ${totalMembers}명`;
-
-        }
 
 
         if (progressBar) {
 
           progressBar.style.width =
             percentage + "%";
+
+        }
+
+
+        // =========================
+        // 신청자 수
+        // =========================
+
+        const memberCount =
+          document.getElementById(
+            "tourMemberCount"
+          );
+
+
+        if (memberCount) {
+
+          memberCount.textContent =
+            `${currentMembers} / ${totalMembers}명 신청`;
+
+        }
+
+
+        // =========================
+        // 모집 상태
+        // =========================
+
+        const recruitStatus =
+          document.getElementById(
+            "tourRecruitStatus"
+          );
+
+
+        if (recruitStatus) {
+
+
+          if (
+            currentMembers >= totalMembers
+          ) {
+
+            recruitStatus.textContent =
+              "🔴 모집 마감";
+
+          }
+
+          else {
+
+            recruitStatus.textContent =
+              "🟢 모집중";
+
+          }
+
+        }
+
+
+        // =========================
+        // 신청 버튼
+        // =========================
+
+        const applyButton =
+          document.getElementById(
+            "tourApplyButton"
+          );
+
+
+        if (applyButton) {
+
+
+          if (
+            currentMembers >= totalMembers
+          ) {
+
+            applyButton.textContent =
+              "모집 마감";
+
+            applyButton.removeAttribute(
+              "href"
+            );
+
+            applyButton.removeAttribute(
+              "target"
+            );
+
+            applyButton.style.opacity =
+              "0.5";
+
+            applyButton.style.cursor =
+              "not-allowed";
+
+          }
 
         }
 
@@ -946,20 +872,6 @@
           "신청자 수를 불러오지 못했습니다.",
           error
         );
-
-
-        const memberCount =
-          document.getElementById(
-            "memberCount"
-          );
-
-
-        if (memberCount) {
-
-          memberCount.textContent =
-            "신청자 수를 불러올 수 없습니다.";
-
-        }
 
       });
 

@@ -57,13 +57,15 @@ fetch(API_URL)
   .then(data => {
 
     const currentMembers =
-      data.current;
+      Number(data.current) || 0;
 
     const totalMembers =
-      data.total;
+      Number(data.total) || 24;
 
 
+    // =========================
     // 모집률 계산
+    // =========================
 
     const percentage =
       Math.min(
@@ -72,7 +74,9 @@ fetch(API_URL)
       );
 
 
-    // 진행바
+    // =========================
+    // 화면 요소
+    // =========================
 
     const progressBar =
       document.getElementById(
@@ -80,13 +84,21 @@ fetch(API_URL)
       );
 
 
-    // 신청자 숫자
-
     const memberCount =
       document.getElementById(
         "memberCount"
       );
 
+
+    const recruitStatus =
+      document.getElementById(
+        "recruitStatus"
+      );
+
+
+    // =========================
+    // 진행바
+    // =========================
 
     if (progressBar) {
 
@@ -96,10 +108,35 @@ fetch(API_URL)
     }
 
 
+    // =========================
+    // 신청자 수
+    // =========================
+
     if (memberCount) {
 
       memberCount.textContent =
         `${currentMembers} / ${totalMembers}명 신청`;
+
+    }
+
+
+    // =========================
+    // 모집 상태
+    // =========================
+
+    if (recruitStatus) {
+
+      if (currentMembers >= totalMembers) {
+
+        recruitStatus.textContent =
+          "🔴 모집 마감";
+
+      } else {
+
+        recruitStatus.textContent =
+          "🟢 모집중";
+
+      }
 
     }
 
@@ -114,51 +151,3 @@ fetch(API_URL)
     );
 
   });
-
-
-// =========================
-// 갤러리 확대 기능
-// =========================
-
-function openGallery(imageSrc) {
-
-  const modal =
-    document.getElementById(
-      "galleryModal"
-    );
-
-
-  const modalImage =
-    document.getElementById(
-      "galleryModalImage"
-    );
-
-
-  if (!modal || !modalImage) return;
-
-
-  modalImage.src = imageSrc;
-
-  modal.style.display = "flex";
-
-}
-
-
-// =========================
-// 갤러리 확대창 닫기
-// =========================
-
-function closeGallery() {
-
-  const modal =
-    document.getElementById(
-      "galleryModal"
-    );
-
-
-  if (!modal) return;
-
-
-  modal.style.display = "none";
-
-}
