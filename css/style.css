@@ -26,6 +26,7 @@ body {
 
 .header {
   position: fixed;
+
   top: 0;
   left: 0;
 
@@ -38,8 +39,12 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  background: rgba(0, 20, 35, 0.75);
-  backdrop-filter: blur(12px);
+  background: rgba(0, 15, 28, 0.68);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
 
   z-index: 1000;
 }
@@ -47,22 +52,49 @@ body {
 
 .logo {
   font-size: 24px;
+
   font-weight: 700;
+
   letter-spacing: 1px;
+
+  white-space: nowrap;
 }
 
 
 .nav {
   display: flex;
+
   gap: 30px;
 }
 
 
 .nav a {
+  position: relative;
+
   color: white;
+
   text-decoration: none;
+
   font-weight: 600;
+
   transition: 0.3s;
+}
+
+
+.nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: #00d4ff;
+
+  transition: width 0.3s ease;
 }
 
 
@@ -71,82 +103,210 @@ body {
 }
 
 
+.nav a:hover::after {
+  width: 100%;
+}
+
+
 /* ===================================
-   메인 화면
+   메인 히어로
 =================================== */
 
 .hero {
+  position: relative;
+
   min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
   text-align: center;
 
-  padding: 100px 20px 50px;
+  padding: 120px 20px 70px;
+
+  overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 50% 100%,
-      #0876a9 0%,
-      #03527f 35%,
-      #012a45 70%,
-      #011b2d 100%
-    );
+    linear-gradient(
+      rgba(0, 18, 32, 0.48),
+      rgba(0, 15, 30, 0.72)
+    ),
+    url("../images/Dive.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
 }
 
 
+/* 바다 사진 위 분위기 */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 20, 35, 0.25),
+      #021d2f
+    );
+
+  pointer-events: none;
+}
+
+
+/* 히어로 내용 */
+
 .hero-content {
-  max-width: 900px;
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 950px;
+
+  animation:
+    heroFade 1.2s ease;
+}
+
+
+@keyframes heroFade {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
 }
 
 
 .hero-small {
-  font-size: 16px;
-  letter-spacing: 5px;
   margin-bottom: 20px;
-  opacity: 0.8;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 6px;
+
+  color: #bdefff;
+
+  text-transform: uppercase;
 }
 
 
 .hero h1 {
-  font-size: clamp(48px, 8vw, 90px);
-  line-height: 1.05;
-  letter-spacing: 4px;
   margin-bottom: 25px;
+
+  font-size:
+    clamp(
+      52px,
+      9vw,
+      105px
+    );
+
+  line-height: 1;
+
+  letter-spacing: 5px;
+
+  text-shadow:
+    0 5px 25px
+    rgba(0, 0, 0, 0.35);
 }
 
 
 .hero-subtitle {
-  font-size: 24px;
-  margin-bottom: 40px;
-  opacity: 0.9;
+  margin-bottom: 42px;
+
+  font-size:
+    clamp(
+      19px,
+      3vw,
+      27px
+    );
+
+  font-weight: 500;
+
+  color: #e5faff;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 3px 15px
+    rgba(0, 0, 0, 0.45);
 }
 
 
+/* ===================================
+   메인 버튼
+=================================== */
+
 .main-btn {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
 
   padding: 16px 38px;
 
   border-radius: 50px;
 
-  background: #00c2ff;
+  background:
+    linear-gradient(
+      135deg,
+      #00d4ff,
+      #009ed1
+    );
+
   color: white;
 
   text-decoration: none;
 
-  font-size: 18px;
+  font-size: 17px;
+
   font-weight: 700;
 
-  transition: 0.3s;
+  box-shadow:
+    0 12px 30px
+    rgba(0, 180, 230, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
 .main-btn:hover {
-  transform: translateY(-4px);
-  background: #00a8e8;
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 180, 230, 0.4);
 }
 
 
@@ -155,84 +315,144 @@ body {
 =================================== */
 
 .section {
-  padding: 100px 60px;
-
   max-width: 1200px;
 
   margin: 0 auto;
+
+  padding:
+    110px 60px;
 }
 
 
 .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 
 .section-title p {
+
+  margin-bottom: 7px;
+
   color: #00c2ff;
 
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
 
-  letter-spacing: 3px;
+  font-weight: 800;
 
-  margin-bottom: 5px;
+  letter-spacing: 4px;
 }
 
 
 .section-title h2 {
-  font-size: 40px;
+
+  font-size:
+    clamp(
+      32px,
+      5vw,
+      44px
+    );
+
+  line-height: 1.2;
 }
 
 
 /* ===================================
-   투어 카드
+   다음 투어 카드
 =================================== */
 
 .tour-card {
+
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1.1fr 0.9fr;
 
-  gap: 40px;
+  gap: 45px;
 
   padding: 45px;
 
   background:
     linear-gradient(
       135deg,
-      #0a527d,
-      #073b5e
+      rgba(10, 82, 125, 0.95),
+      rgba(5, 52, 82, 0.95)
     );
 
-  border-radius: 25px;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 28px;
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.25);
+    0 25px 70px
+    rgba(0, 0, 0, 0.28);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+.tour-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -100px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 196, 255, 0.08);
+
+  pointer-events: none;
 }
 
 
 .tour-label {
+
   display: inline-block;
+
+  margin-bottom: 18px;
 
   color: #00d4ff;
 
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
 
-  margin-bottom: 15px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
 }
 
 
 .tour-info h3 {
-  font-size: 36px;
+
   margin-bottom: 25px;
+
+  font-size:
+    clamp(
+      28px,
+      4vw,
+      38px
+    );
+
+  line-height: 1.25;
 }
 
 
 .tour-info p {
-  margin: 10px 0;
+
+  margin: 13px 0;
+
   color: #e4f6ff;
+
+  font-size: 16px;
 }
 
 
@@ -241,38 +461,62 @@ body {
 =================================== */
 
 .tour-status {
+
+  position: relative;
+
+  z-index: 2;
+
   padding: 10px;
 }
 
 
 .countdown-title {
+
+  margin-bottom: 4px;
+
   color: #bdefff;
-  margin-bottom: 5px;
-}
 
+  font-size: 14px;
 
-#countdown {
-  font-size: 55px;
-  font-weight: 800;
-
-  color: #00d4ff;
-
-  margin-bottom: 30px;
-}
-
-
-.progress-title {
-  margin-bottom: 10px;
   font-weight: 600;
 }
 
 
+#countdown {
+
+  margin-bottom: 30px;
+
+  color: #00d4ff;
+
+  font-size:
+    clamp(
+      45px,
+      6vw,
+      60px
+    );
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+.progress-title {
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+}
+
+
 .progress {
+
   width: 100%;
 
   height: 14px;
 
-  background: #164766;
+  background:
+    rgba(255, 255, 255, 0.12);
 
   border-radius: 20px;
 
@@ -281,25 +525,41 @@ body {
 
 
 .progress-bar {
-  height: 100%;
 
   width: 0%;
 
-  background: #00c2ff;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00aeea,
+      #00e0ff
+    );
 
   border-radius: 20px;
 
-  transition: width 1s ease;
+  transition:
+    width 1s ease;
 }
 
 
 #memberCount {
+
   margin-top: 10px;
+
   color: #dff8ff;
+
+  font-size: 14px;
 }
 
 
+/* ===================================
+   투어 상세 버튼
+=================================== */
+
 .tour-btn {
+
   display: block;
 
   width: 100%;
@@ -308,9 +568,15 @@ body {
 
   padding: 15px;
 
-  border-radius: 12px;
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
 
-  background: #00c2ff;
+  border-radius: 13px;
+
+  background:
+    rgba(0, 194, 255, 0.95);
+
   color: white;
 
   text-align: center;
@@ -319,13 +585,18 @@ body {
 
   font-weight: 700;
 
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 
 .tour-btn:hover {
+
   background: #00a8e8;
-  transform: translateY(-2px);
+
+  transform:
+    translateY(-3px);
 }
 
 
@@ -334,43 +605,70 @@ body {
 =================================== */
 
 .notice-list {
+
   background: #073650;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
 
   border-radius: 20px;
 
   overflow: hidden;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.15);
 }
 
 
 .notice-item {
+
   display: flex;
 
   align-items: center;
 
   gap: 30px;
 
-  padding: 22px 30px;
+  padding:
+    23px 30px;
 
   border-bottom:
-    1px solid rgba(255, 255, 255, 0.1);
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.3s ease;
 }
 
 
 .notice-item:last-child {
+
   border-bottom: none;
 }
 
 
+.notice-item:hover {
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+
 .notice-item span {
+
   min-width: 100px;
 
   color: #82dfff;
 
-  font-size: 14px;
+  font-size: 13px;
+
+  font-weight: 600;
 }
 
 
 .notice-item strong {
+
   font-weight: 500;
 }
 
@@ -380,6 +678,7 @@ body {
 =================================== */
 
 .gallery-grid {
+
   display: grid;
 
   grid-template-columns:
@@ -390,7 +689,8 @@ body {
 
 
 .gallery-box {
-  height: 220px;
+
+  height: 240px;
 
   display: flex;
 
@@ -408,16 +708,25 @@ body {
 
   overflow: hidden;
 
-  transition: 0.3s;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 
 .gallery-box:hover {
-  transform: translateY(-8px);
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 0, 0, 0.3);
 }
 
 
 .gallery-box img {
+
   width: 100%;
   height: 100%;
 
@@ -428,12 +737,14 @@ body {
   cursor: pointer;
 
   transition:
-    transform 0.4s ease;
+    transform 0.5s ease;
 }
 
 
 .gallery-box:hover img {
-  transform: scale(1.05);
+
+  transform:
+    scale(1.06);
 }
 
 
@@ -442,6 +753,7 @@ body {
 =================================== */
 
 .gallery-modal {
+
   display: none;
 
   position: fixed;
@@ -451,7 +763,7 @@ body {
   inset: 0;
 
   background:
-    rgba(0, 0, 0, 0.85);
+    rgba(0, 0, 0, 0.88);
 
   justify-content: center;
   align-items: center;
@@ -461,7 +773,9 @@ body {
 
 
 .gallery-modal img {
+
   max-width: 90%;
+
   max-height: 85vh;
 
   object-fit: contain;
@@ -469,11 +783,13 @@ body {
   border-radius: 12px;
 
   box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.5);
+    0 10px 50px
+    rgba(0, 0, 0, 0.6);
 }
 
 
 .gallery-close {
+
   position: absolute;
 
   top: 20px;
@@ -494,6 +810,7 @@ body {
 
 
 .gallery-close:hover {
+
   opacity: 0.7;
 }
 
@@ -503,25 +820,36 @@ body {
 =================================== */
 
 footer {
-  padding: 50px 20px;
+
+  padding:
+    60px 20px;
 
   text-align: center;
 
   background: #011321;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
 }
 
 
 footer h3 {
+
   margin-bottom: 10px;
+
+  font-size: 20px;
 }
 
 
 footer p {
+
   color: #b8d2df;
 }
 
 
 footer .copyright {
+
   margin-top: 20px;
 
   font-size: 13px;
@@ -536,106 +864,423 @@ footer .copyright {
 
 @media (max-width: 768px) {
 
+  /* 상단 메뉴 */
+
   .header {
+
     height: auto;
 
     min-height: 70px;
 
-    padding: 15px 20px;
+    padding:
+      14px 20px;
 
     flex-direction: column;
 
-    gap: 12px;
+    gap: 10px;
   }
 
 
   .logo {
+
     font-size: 20px;
   }
 
 
   .nav {
-    gap: 15px;
+
+    gap: 18px;
   }
 
 
   .nav a {
-    font-size: 14px;
+
+    font-size: 13px;
   }
 
 
+  /* 히어로 */
+
   .hero {
-    padding-top: 140px;
+
+    min-height: 100svh;
+
+    padding:
+      140px 20px 70px;
+
+    background-position:
+      center center;
+  }
+
+
+  .hero-small {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(
+        48px,
+        14vw,
+        75px
+      );
+
+    letter-spacing: 2px;
   }
 
 
   .hero-subtitle {
+
     font-size: 18px;
+
+    line-height: 1.5;
   }
 
+
+  /* 섹션 */
 
   .section {
-    padding: 70px 20px;
+
+    padding:
+      75px 20px;
   }
 
 
-  .section-title h2 {
-    font-size: 32px;
-  }
-
+  /* 투어 */
 
   .tour-card {
+
     grid-template-columns: 1fr;
 
-    padding: 25px;
+    gap: 25px;
+
+    padding: 28px;
   }
 
 
   .tour-info h3 {
+
     font-size: 28px;
   }
 
 
   #countdown {
-    font-size: 45px;
+
+    font-size: 48px;
   }
 
 
+  /* 공지 */
+
   .notice-item {
+
     flex-direction: column;
 
     align-items: flex-start;
 
     gap: 5px;
+
+    padding:
+      20px;
   }
 
 
+  /* 갤러리 */
+
   .gallery-grid {
+
     grid-template-columns: 1fr;
   }
 
 
   .gallery-box {
-    height: 180px;
+
+    height: 210px;
   }
 
 
+  /* 확대창 */
+
   .gallery-modal {
+
     padding: 15px;
   }
 
 
   .gallery-modal img {
+
     max-width: 95%;
+
     max-height: 80vh;
   }
 
 
   .gallery-close {
+
     top: 15px;
+
     right: 20px;
 
     font-size: 40px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .nav {
+
+    gap: 12px;
+  }
+
+
+  .nav a {
+
+    font-size: 12px;
+  }
+
+
+  .hero-small {
+
+    letter-spacing: 2px;
+  }
+
+
+  .hero-subtitle {
+
+    font-size: 17px;
+  }
+
+
+  .main-btn {
+
+    width: 100%;
+
+    max-width: 260px;
+  }
+
+}/* ===================================
+   다음 투어 카드 이미지
+=================================== */
+
+.tour-image {
+
+  position: relative;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+}
+
+
+.tour-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 520px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+
+}
+
+
+.tour-card:hover .tour-image img {
+
+  transform:
+    scale(1.04);
+
+}
+
+
+.tour-image-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 15, 30, 0.75),
+      transparent 50%
+    );
+
+}
+
+
+.tour-image-overlay span {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #ffffff;
+
+}
+
+
+/* ===================================
+   투어 상세 정보
+=================================== */
+
+.tour-details {
+
+  margin-bottom: 25px;
+
+}
+
+
+.tour-details p {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 12px 0;
+
+}
+
+
+.tour-details p span {
+
+  width: 25px;
+
+}
+
+
+/* ===================================
+   투어 D-day
+=================================== */
+
+.tour-countdown {
+
+  padding-top: 5px;
+
+}
+
+
+.tour-countdown #countdown {
+
+  margin-bottom: 25px;
+
+}
+
+
+/* ===================================
+   모집 현황
+=================================== */
+
+.tour-recruit {
+
+  margin-top: 5px;
+
+}
+
+
+.progress-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+.progress-header span:last-child {
+
+  color: #bdefff;
+
+}
+
+
+/* ===================================
+   투어 버튼
+=================================== */
+
+.tour-btn {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+
+.tour-btn span {
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+
+}
+
+
+.tour-btn:hover span {
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* ===================================
+   투어 카드 모바일
+=================================== */
+
+@media (max-width: 768px) {
+
+  .tour-image {
+
+    min-height: 280px;
+
+  }
+
+
+  .tour-image img {
+
+    min-height: 280px;
+
   }
 
 }
