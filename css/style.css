@@ -14,11 +14,8 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-
   background: #021d2f;
-
   color: white;
-
   line-height: 1.6;
 }
 
@@ -28,26 +25,20 @@ body {
 =================================== */
 
 .header {
-
   position: fixed;
-
   top: 0;
   left: 0;
 
   width: 100%;
-
   height: 80px;
 
   padding: 0 60px;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   background: rgba(0, 20, 35, 0.75);
-
   backdrop-filter: blur(12px);
 
   z-index: 1000;
@@ -55,39 +46,28 @@ body {
 
 
 .logo {
-
   font-size: 24px;
-
   font-weight: 700;
-
   letter-spacing: 1px;
 }
 
 
 .nav {
-
   display: flex;
-
   gap: 30px;
 }
 
 
 .nav a {
-
   color: white;
-
   text-decoration: none;
-
   font-weight: 600;
-
   transition: 0.3s;
 }
 
 
 .nav a:hover {
-
   color: #00d4ff;
-
 }
 
 
@@ -96,13 +76,10 @@ body {
 =================================== */
 
 .hero {
-
   min-height: 100vh;
 
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 
   text-align: center;
@@ -121,51 +98,34 @@ body {
 
 
 .hero-content {
-
   max-width: 900px;
-
 }
 
 
 .hero-small {
-
   font-size: 16px;
-
   letter-spacing: 5px;
-
   margin-bottom: 20px;
-
   opacity: 0.8;
-
 }
 
 
 .hero h1 {
-
   font-size: clamp(48px, 8vw, 90px);
-
   line-height: 1.05;
-
   letter-spacing: 4px;
-
   margin-bottom: 25px;
-
 }
 
 
 .hero-subtitle {
-
   font-size: 24px;
-
   margin-bottom: 40px;
-
   opacity: 0.9;
-
 }
 
 
 .main-btn {
-
   display: inline-block;
 
   padding: 16px 38px;
@@ -173,13 +133,11 @@ body {
   border-radius: 50px;
 
   background: #00c2ff;
-
   color: white;
 
   text-decoration: none;
 
   font-size: 18px;
-
   font-weight: 700;
 
   transition: 0.3s;
@@ -187,11 +145,8 @@ body {
 
 
 .main-btn:hover {
-
   transform: translateY(-4px);
-
   background: #00a8e8;
-
 }
 
 
@@ -200,7 +155,6 @@ body {
 =================================== */
 
 .section {
-
   padding: 100px 60px;
 
   max-width: 1200px;
@@ -210,17 +164,14 @@ body {
 
 
 .section-title {
-
   margin-bottom: 40px;
 }
 
 
 .section-title p {
-
   color: #00c2ff;
 
   font-size: 14px;
-
   font-weight: 700;
 
   letter-spacing: 3px;
@@ -230,7 +181,6 @@ body {
 
 
 .section-title h2 {
-
   font-size: 40px;
 }
 
@@ -240,7 +190,6 @@ body {
 =================================== */
 
 .tour-card {
-
   display: grid;
 
   grid-template-columns: 1fr 1fr;
@@ -249,11 +198,12 @@ body {
 
   padding: 45px;
 
-  background: linear-gradient(
-    135deg,
-    #0a527d,
-    #073b5e
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #0a527d,
+      #073b5e
+    );
 
   border-radius: 25px;
 
@@ -263,13 +213,11 @@ body {
 
 
 .tour-label {
-
   display: inline-block;
 
   color: #00d4ff;
 
   font-size: 14px;
-
   font-weight: 700;
 
   margin-bottom: 15px;
@@ -277,17 +225,13 @@ body {
 
 
 .tour-info h3 {
-
   font-size: 36px;
-
   margin-bottom: 25px;
 }
 
 
 .tour-info p {
-
   margin: 10px 0;
-
   color: #e4f6ff;
 }
 
@@ -297,24 +241,18 @@ body {
 =================================== */
 
 .tour-status {
-
   padding: 10px;
-
 }
 
 
 .countdown-title {
-
   color: #bdefff;
-
   margin-bottom: 5px;
 }
 
 
 #countdown {
-
   font-size: 55px;
-
   font-weight: 800;
 
   color: #00d4ff;
@@ -324,15 +262,12 @@ body {
 
 
 .progress-title {
-
   margin-bottom: 10px;
-
   font-weight: 600;
 }
 
 
 .progress {
-
   width: 100%;
 
   height: 14px;
@@ -342,15 +277,13 @@ body {
   border-radius: 20px;
 
   overflow: hidden;
-
 }
 
 
 .progress-bar {
-
   height: 100%;
 
-  width: 67%;
+  width: 0%;
 
   background: #00c2ff;
 
@@ -361,15 +294,12 @@ body {
 
 
 #memberCount {
-
   margin-top: 10px;
-
   color: #dff8ff;
 }
 
 
 .tour-btn {
-
   display: block;
 
   width: 100%;
@@ -381,7 +311,6 @@ body {
   border-radius: 12px;
 
   background: #00c2ff;
-
   color: white;
 
   text-align: center;
@@ -395,9 +324,7 @@ body {
 
 
 .tour-btn:hover {
-
   background: #00a8e8;
-
   transform: translateY(-2px);
 }
 
@@ -407,7 +334,6 @@ body {
 =================================== */
 
 .notice-list {
-
   background: #073650;
 
   border-radius: 20px;
@@ -417,7 +343,6 @@ body {
 
 
 .notice-item {
-
   display: flex;
 
   align-items: center;
@@ -426,20 +351,17 @@ body {
 
   padding: 22px 30px;
 
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
 }
 
 
 .notice-item:last-child {
-
   border-bottom: none;
-
 }
 
 
 .notice-item span {
-
   min-width: 100px;
 
   color: #82dfff;
@@ -449,7 +371,6 @@ body {
 
 
 .notice-item strong {
-
   font-weight: 500;
 }
 
@@ -459,7 +380,6 @@ body {
 =================================== */
 
 .gallery-grid {
-
   display: grid;
 
   grid-template-columns:
@@ -470,16 +390,12 @@ body {
 
 
 .gallery-box {
-
   height: 220px;
 
   display: flex;
 
   justify-content: center;
-
   align-items: center;
-
-  font-size: 70px;
 
   background:
     linear-gradient(
@@ -490,14 +406,95 @@ body {
 
   border-radius: 20px;
 
+  overflow: hidden;
+
   transition: 0.3s;
 }
 
 
 .gallery-box:hover {
-
   transform: translateY(-8px);
+}
 
+
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.gallery-box:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ===================================
+   갤러리 확대창
+=================================== */
+
+.gallery-modal {
+  display: none;
+
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.85);
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+
+.gallery-modal img {
+  max-width: 90%;
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.gallery-close {
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  color: white;
+
+  font-size: 45px;
+
+  font-weight: 300;
+
+  cursor: pointer;
+
+  line-height: 1;
+
+  z-index: 10000;
+}
+
+
+.gallery-close:hover {
+  opacity: 0.7;
 }
 
 
@@ -506,7 +503,6 @@ body {
 =================================== */
 
 footer {
-
   padding: 50px 20px;
 
   text-align: center;
@@ -516,19 +512,16 @@ footer {
 
 
 footer h3 {
-
   margin-bottom: 10px;
 }
 
 
 footer p {
-
   color: #b8d2df;
 }
 
 
 footer .copyright {
-
   margin-top: 20px;
 
   font-size: 13px;
@@ -544,7 +537,6 @@ footer .copyright {
 @media (max-width: 768px) {
 
   .header {
-
     height: auto;
 
     min-height: 70px;
@@ -554,171 +546,96 @@ footer .copyright {
     flex-direction: column;
 
     gap: 12px;
-
   }
 
 
   .logo {
-
     font-size: 20px;
-
   }
 
 
   .nav {
-
     gap: 15px;
-
   }
 
 
   .nav a {
-
     font-size: 14px;
-
   }
 
 
   .hero {
-
     padding-top: 140px;
-
   }
 
 
   .hero-subtitle {
-
     font-size: 18px;
-
   }
 
 
   .section {
-
     padding: 70px 20px;
-
   }
 
 
   .section-title h2 {
-
     font-size: 32px;
-
   }
 
 
   .tour-card {
-
     grid-template-columns: 1fr;
 
     padding: 25px;
-
   }
 
 
   .tour-info h3 {
-
     font-size: 28px;
-
   }
 
 
   #countdown {
-
     font-size: 45px;
-
   }
 
 
   .notice-item {
-
     flex-direction: column;
 
     align-items: flex-start;
 
     gap: 5px;
-
   }
 
 
   .gallery-grid {
-
     grid-template-columns: 1fr;
-
   }
 
 
   .gallery-box {
-
     height: 180px;
-
   }
 
-/* =========================
-   갤러리 사진
-========================= */
 
-.gallery-box {
-  overflow: hidden;
-  border-radius: 16px;
-  aspect-ratio: 4 / 3;
-}
+  .gallery-modal {
+    padding: 15px;
+  }
 
-.gallery-box img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
 
-.gallery-box:hover img {
-  transform: scale(1.05);
-}/* =========================
-   갤러리 확대창
-========================= */
+  .gallery-modal img {
+    max-width: 95%;
+    max-height: 80vh;
+  }
 
-.gallery-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
 
-  background: rgba(0, 0, 0, 0.85);
+  .gallery-close {
+    top: 15px;
+    right: 20px;
 
-  justify-content: center;
-  align-items: center;
+    font-size: 40px;
+  }
 
-  padding: 30px;
-}
-
-.gallery-modal img {
-  max-width: 90%;
-  max-height: 85vh;
-
-  object-fit: contain;
-
-  border-radius: 12px;
-
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-.gallery-close {
-  position: absolute;
-
-  top: 20px;
-  right: 30px;
-
-  color: white;
-
-  font-size: 45px;
-  font-weight: 300;
-
-  cursor: pointer;
-
-  line-height: 1;
-}
-
-.gallery-close:hover {
-  opacity: 0.7;
 }
