@@ -7,13 +7,15 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>School Of BLUE</title>
 
   <link
     rel="stylesheet"
-    href="css/style.css">
+    href="css/style.css"
+  >
 
 </head>
 
@@ -21,680 +23,707 @@
 <body>
 
 
-  <!-- =========================
-       상단 메뉴
-  ========================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header class="header">
+<header class="header">
 
-    <div class="logo">
-      🌊 School Of Blue
+  <div class="logo">
+    🌊 School Of Blue
+  </div>
+
+  <nav class="nav">
+
+    <a href="index.html">
+      홈
+    </a>
+
+    <a href="#tour">
+      투어
+    </a>
+
+    <a href="#notice">
+      공지
+    </a>
+
+    <a href="#gallery">
+      갤러리
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <p class="hero-small">
+      Teacher`s Dive Club Since 2026
+    </p>
+
+    <h1>
+      School Of BLUE
+    </h1>
+
+    <p class="hero-subtitle">
+      우리의 교실 우리의 바다 우리의 다이빙
+    </p>
+
+    <a
+      href="#tour"
+      class="main-btn"
+    >
+      다음 투어 보기
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     UPCOMING TOUR
+========================= -->
+
+<section
+  class="section"
+  id="tour"
+>
+
+  <div class="section-title">
+
+    <p>
+      UPCOMING TOUR
+    </p>
+
+    <h2>
+      다음 투어
+    </h2>
+
+  </div>
+
+
+  <div class="tour-card">
+
+
+    <!-- 투어 이미지 -->
+
+    <div class="tour-image">
+
+      <img
+        src="./images/Dive2.jpg"
+        alt="School Of BLUE 다이빙 투어"
+      >
+
+      <div class="tour-image-overlay">
+
+        <span>
+          🌊 SCHOOL OF BLUE
+        </span>
+
+      </div>
+
     </div>
 
 
-    <nav class="nav">
+
+    <!-- 투어 정보 -->
+
+    <div class="tour-info">
+
+
+      <span class="tour-label">
+        🤿 NEXT TOUR
+      </span>
+
+
+      <!-- 투어명 -->
+
+      <h3 id="tourName">
+        2027년 1월 겨울방학 투어
+      </h3>
+
+
+
+      <!-- 투어 상세정보 -->
+
+      <div class="tour-details">
+
+
+        <!-- 장소 -->
+
+        <p>
+
+          <span>
+            📍
+          </span>
+
+          <span id="tourLocation">
+            필리핀 세부
+          </span>
+
+        </p>
+
+
+
+        <!-- 날짜 -->
+
+        <p>
+
+          <span>
+            📅
+          </span>
+
+          <span id="tourDate">
+            2027.01.25(월) ~ 01.29.(금)
+          </span>
+
+        </p>
+
+
+
+        <!-- 다이빙 -->
+
+        <p>
+
+          <span>
+            🤿
+          </span>
+
+          <span id="tourDiving">
+            보트다이빙 10회
+          </span>
+
+        </p>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           D-DAY
+      ========================= -->
+
+      <div class="tour-countdown">
+
+        <div class="countdown-title">
+          투어까지
+        </div>
+
+        <div id="countdown">
+          D-계산중
+        </div>
+
+      </div>
+
+
+
+      <!-- =========================
+           모집 현황
+      ========================= -->
+
+      <div class="tour-recruit">
+
+
+        <div class="progress-header">
+
+          <span>
+            모집 현황
+          </span>
+
+          <span id="recruitStatus">
+            🟢 모집중
+          </span>
+
+        </div>
+
+
+
+        <div class="progress">
+
+          <div
+            class="progress-bar"
+            id="progressBar"
+          ></div>
+
+        </div>
+
+
+
+        <div
+          id="memberCount"
+          class="member-count"
+        >
+          0 / 24명 신청
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           투어 상세 버튼
+      ========================= -->
+
+      <a
+        href="jeju-tour.html"
+        class="tour-btn"
+      >
+
+        투어 상세보기
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     NOTICE
+========================= -->
+
+<section
+  class="section"
+  id="notice"
+>
+
+  <div class="section-title">
+
+    <p>
+      NOTICE
+    </p>
+
+    <h2>
+      공지사항
+    </h2>
+
+  </div>
+
+
+
+  <div class="notice-board">
+
+
+    <!-- 공지 1 -->
+
+    <a
+      href="notice-tour.html"
+      class="notice-item notice-important"
+    >
+
+      <div class="notice-icon">
+        📌
+      </div>
+
+
+      <div class="notice-content">
+
+        <div class="notice-meta">
+
+          <span class="notice-badge">
+            IMPORTANT
+          </span>
+
+          <span class="notice-date">
+            2027.01.25
+          </span>
+
+        </div>
+
+
+        <strong>
+          27년 1월 필리핀 세부 투어 참가자를 모집합니다.
+        </strong>
+
+        <p>
+          겨울방학 세부 보트다이빙 투어 참가자를 모집합니다.
+        </p>
+
+      </div>
+
+
+      <div class="notice-arrow">
+        →
+      </div>
+
+    </a>
+
+
+
+    <!-- 공지 2 -->
+
+    <a
+      href="notice-equipment.html"
+      class="notice-item"
+    >
+
+      <div class="notice-icon">
+        🤿
+      </div>
+
+
+      <div class="notice-content">
+
+        <div class="notice-meta">
+
+          <span class="notice-category">
+            DIVING
+          </span>
+
+          <span class="notice-date">
+            2027.01.25
+          </span>
+
+        </div>
+
+
+        <strong>
+          다이빙 장비 점검 안내
+        </strong>
+
+        <p>
+          투어 전 개인 장비 및 다이빙 장비를 점검해주세요.
+        </p>
+
+      </div>
+
+
+      <div class="notice-arrow">
+        →
+      </div>
+
+    </a>
+
+
+
+    <!-- 공지 3 -->
+
+    <a
+      href="notice-club.html"
+      class="notice-item"
+    >
+
+      <div class="notice-icon">
+        🌊
+      </div>
+
+
+      <div class="notice-content">
+
+        <div class="notice-meta">
+
+          <span class="notice-category">
+            CLUB
+          </span>
+
+          <span class="notice-date">
+            2027.01.25
+          </span>
+
+        </div>
+
+
+        <strong>
+          신규 회원 모집 안내
+        </strong>
+
+        <p>
+          School Of BLUE와 함께 바다를 즐길 새로운 멤버를 기다립니다.
+        </p>
+
+      </div>
+
+
+      <div class="notice-arrow">
+        →
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section
+  class="section"
+  id="gallery"
+>
+
+
+  <div class="section-title">
+
+    <p>
+      GALLERY
+    </p>
+
+    <h2>
+      다이빙 갤러리
+    </h2>
+
+    <p class="gallery-description">
+      우리의 바다, 우리의 순간
+    </p>
+
+  </div>
+
+
+
+  <div class="gallery-feature">
+
+
+    <!-- 메인 사진 -->
+
+    <div class="gallery-main">
+
+      <img
+        src="./images/Dive.jpg"
+        alt="School Of BLUE 다이빙 메인 사진"
+        onclick="openGallery(this.src)"
+      >
+
+      <div class="gallery-caption">
+
+        <span>
+          SCHOOL OF BLUE
+        </span>
+
+        <strong>
+          우리의 바다
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- 사이드 사진 -->
+
+    <div class="gallery-side">
+
+
+      <div class="gallery-side-item">
+
+        <img
+          src="./images/Dive2.jpg"
+          alt="School Of BLUE 다이빙 사진"
+          onclick="openGallery(this.src)"
+        >
+
+        <div class="gallery-side-caption">
+
+          <span>
+            DIVING
+          </span>
+
+          <strong>
+            우리의 다이빙
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="gallery-side-item gallery-empty">
+
+        <div class="gallery-placeholder">
+
+          <span>
+            🌊
+          </span>
+
+          <strong>
+            More Blue
+          </strong>
+
+          <p>
+            새로운 다이빙 사진이<br>
+            곧 추가됩니다.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+
+  <div class="footer-inner">
+
+
+    <!-- 브랜드 -->
+
+    <div class="footer-brand">
+
+      <h3>
+        🌊 School Of BLUE
+      </h3>
+
+      <p class="footer-slogan">
+        우리의 교실 우리의 바다 우리의 다이빙
+      </p>
+
+      <p class="footer-description">
+        선생님들이 함께 만들고 함께 즐기는<br>
+        다이빙 클럽 School Of BLUE
+      </p>
+
+    </div>
+
+
+
+    <!-- QUICK MENU -->
+
+    <div class="footer-menu">
+
+      <h4>
+        QUICK MENU
+      </h4>
 
       <a href="index.html">
         홈
       </a>
 
       <a href="#tour">
-        투어
+        다음 투어
       </a>
 
       <a href="#notice">
-        공지
+        공지사항
       </a>
 
       <a href="#gallery">
         갤러리
       </a>
 
-    </nav>
-
-  </header>
+    </div>
 
 
-  <!-- =========================
-       메인 화면
-  ========================== -->
 
-  <section class="hero">
+    <!-- NEXT TOUR -->
 
-    <div class="hero-content">
+    <div class="footer-tour">
 
-      <p class="hero-small">
-        Teacher`s Dive Club Since 2026
+      <h4>
+        NEXT TOUR
+      </h4>
+
+      <strong>
+        2027 겨울방학 투어
+      </strong>
+
+      <p>
+        📍 필리핀 세부
       </p>
 
-
-      <h1>
-        School Of BLUE
-      </h1>
-
-
-      <p class="hero-subtitle">
-        우리의 교실 우리의 바다 우리의 다이빙
+      <p>
+        📅 2027.01.25 ~ 01.29
       </p>
 
-
-      <a
-        href="#tour"
-        class="main-btn">
-
-        다음 투어 보기
-
+      <a href="jeju-tour.html">
+        투어 자세히 보기 →
       </a>
 
     </div>
 
-  </section>
+
+  </div>
 
 
-  <!-- =========================
-       다음 투어
-  ========================== -->
 
-  <section
-    class="section"
-    id="tour">
+  <!-- 하단 -->
 
-
-    <div class="section-title">
-
-      <p>
-        UPCOMING TOUR
-      </p>
-
-      <h2>
-        다음 투어
-      </h2>
-
-    </div>
-
-
-    <div class="tour-card">
-
-
-      <!-- 투어 이미지 -->
-
-      <div class="tour-image">
-
-        <img
-          src="./images/Dive2.jpg"
-          alt="2027년 1월 필리핀 세부 다이빙 투어">
-
-        <div class="tour-image-overlay">
-
-          <span>
-            🌊 SCHOOL OF BLUE
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- 투어 정보 -->
-
-      <div class="tour-info">
-
-
-        <span class="tour-label">
-          🤿 NEXT TOUR
-        </span>
-
-
-        <h3>
-          2027년 1월<br>
-          겨울방학 투어
-        </h3>
-
-
-        <div class="tour-details">
-
-
-          <p>
-            <span>📍</span>
-            필리핀 세부
-          </p>
-
-
-          <p>
-            <span>📅</span>
-            2027.01.25(월)
-            ~
-            01.29.(금)
-          </p>
-
-
-          <p>
-            <span>🤿</span>
-            보트다이빙 10회
-          </p>
-
-        </div>
-
-
-        <!-- D-day -->
-
-        <div class="tour-countdown">
-
-          <div class="countdown-title">
-            투어까지
-          </div>
-
-
-          <div id="countdown">
-            D-계산중
-          </div>
-
-        </div>
-
-
-        <!-- 모집 현황 -->
-
-        <div class="tour-recruit">
-
-  <div class="progress-header">
+  <div class="footer-bottom">
 
     <span>
-      모집 현황
+      © 2026 School Of BLUE
     </span>
 
-    <span id="recruitStatus">
-      🟢 모집중
+    <span>
+      Teacher`s Dive Club Since 2026
     </span>
 
   </div>
 
 
-  <div class="progress">
-
-    <div
-      class="progress-bar"
-      id="progressBar">
-    </div>
-
-  </div>
+</footer>
 
 
-  <div
-    id="memberCount"
-    class="member-count">
 
-    0 / 24명 신청
+<!-- =========================
+     GALLERY MODAL
+========================= -->
 
-  </div>
+<div
+  id="galleryModal"
+  class="gallery-modal"
+>
+
+  <span
+    class="gallery-close"
+    onclick="closeGallery()"
+  >
+    ×
+  </span>
+
+
+  <img
+    id="galleryModalImage"
+    src=""
+    alt="확대된 다이빙 사진"
+  >
 
 </div>
 
 
-        <!-- 상세보기 -->
 
-        <a
-          href="jeju-tour.html"
-          class="tour-btn">
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-          투어 상세보기
-
-          <span>
-            →
-          </span>
-
-        </a>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       공지사항
-  ========================== -->
-
-  <section
-    class="section"
-    id="notice">
-
-
-    <div class="section-title">
-
-      <p>
-        NOTICE
-      </p>
-
-
-      <h2>
-        공지사항
-      </h2>
-
-    </div>
-
-
-    <div class="notice-board">
-
-
-      <!-- =====================
-           중요 공지
-      ====================== -->
-
-      <a
-        href="notice-tour.html"
-        class="notice-item notice-important">
-
-
-        <div class="notice-icon">
-          📌
-        </div>
-
-
-        <div class="notice-content">
-
-          <div class="notice-meta">
-
-            <span class="notice-badge">
-              IMPORTANT
-            </span>
-
-            <span class="notice-date">
-              2027.01.25
-            </span>
-
-          </div>
-
-
-          <strong>
-            27년 1월 필리핀 세부 투어 참가자를 모집합니다.
-          </strong>
-
-
-          <p>
-            겨울방학 세부 보트다이빙 투어 참가자를 모집합니다.
-          </p>
-
-        </div>
-
-
-        <div class="notice-arrow">
-          →
-        </div>
-
-      </a>
-
-
-      <!-- =====================
-           장비 공지
-      ====================== -->
-
-      <a
-        href="notice-equipment.html"
-        class="notice-item">
-
-
-        <div class="notice-icon">
-          🤿
-        </div>
-
-
-        <div class="notice-content">
-
-          <div class="notice-meta">
-
-            <span class="notice-category">
-              DIVING
-            </span>
-
-            <span class="notice-date">
-              2027.01.25
-            </span>
-
-          </div>
-
-
-          <strong>
-            다이빙 장비 점검 안내
-          </strong>
-
-
-          <p>
-            투어 전 개인 장비 및 다이빙 장비를 점검해주세요.
-          </p>
-
-        </div>
-
-
-        <div class="notice-arrow">
-          →
-        </div>
-
-      </a>
-
-
-      <!-- =====================
-           클럽 공지
-      ====================== -->
-
-      <a
-        href="notice-club.html"
-        class="notice-item">
-
-
-        <div class="notice-icon">
-          🌊
-        </div>
-
-
-        <div class="notice-content">
-
-          <div class="notice-meta">
-
-            <span class="notice-category">
-              CLUB
-            </span>
-
-            <span class="notice-date">
-              2027.01.25
-            </span>
-
-          </div>
-
-
-          <strong>
-            신규 회원 모집 안내
-          </strong>
-
-
-          <p>
-            School Of BLUE와 함께 바다를 즐길 새로운 멤버를 기다립니다.
-          </p>
-
-        </div>
-
-
-        <div class="notice-arrow">
-          →
-        </div>
-
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       다이빙 갤러리
-  ========================== -->
-
-  <section
-    class="section"
-    id="gallery">
-
-
-    <div class="section-title">
-
-      <p>
-        GALLERY
-      </p>
-
-
-      <h2>
-        다이빙 갤러리
-      </h2>
-
-
-      <p class="gallery-description">
-        우리의 바다, 우리의 순간
-      </p>
-
-    </div>
-
-
-    <div class="gallery-feature">
-
-
-      <!-- 메인 사진 -->
-
-      <div
-        class="gallery-main">
-
-        <img
-          src="./images/Dive.jpg"
-          alt="School Of BLUE 다이빙 메인 사진"
-          onclick="openGallery(this.src)">
-
-
-        <div class="gallery-caption">
-
-          <span>
-            SCHOOL OF BLUE
-          </span>
-
-          <strong>
-            우리의 바다
-          </strong>
-
-        </div>
-
-      </div>
-
-
-      <!-- 서브 사진 -->
-
-      <div class="gallery-side">
-
-
-        <div
-          class="gallery-side-item">
-
-          <img
-            src="./images/Dive2.jpg"
-            alt="School Of BLUE 다이빙 사진"
-            onclick="openGallery(this.src)">
-
-
-          <div class="gallery-side-caption">
-
-            <span>
-              DIVING
-            </span>
-
-            <strong>
-              우리의 다이빙
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <div
-          class="gallery-side-item gallery-empty">
-
-          <div class="gallery-placeholder">
-
-            <span>
-              🌊
-            </span>
-
-            <strong>
-              More Blue
-            </strong>
-
-            <p>
-              새로운 다이빙 사진이<br>
-              곧 추가됩니다.
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-  <!-- =========================
-       푸터
-  ========================== -->
-
-  <footer class="site-footer">
-
-
-    <div class="footer-inner">
-
-
-      <!-- 클럽 소개 -->
-
-      <div class="footer-brand">
-
-        <h3>
-          🌊 School Of BLUE
-        </h3>
-
-
-        <p class="footer-slogan">
-          우리의 교실 우리의 바다 우리의 다이빙
-        </p>
-
-
-        <p class="footer-description">
-          선생님들이 함께 만들고 함께 즐기는<br>
-          다이빙 클럽 School Of BLUE
-        </p>
-
-      </div>
-
-
-      <!-- 빠른 메뉴 -->
-
-      <div class="footer-menu">
-
-        <h4>
-          QUICK MENU
-        </h4>
-
-
-        <a href="index.html">
-          홈
-        </a>
-
-
-        <a href="#tour">
-          다음 투어
-        </a>
-
-
-        <a href="#notice">
-          공지사항
-        </a>
-
-
-        <a href="#gallery">
-          갤러리
-        </a>
-
-      </div>
-
-
-      <!-- 다음 투어 정보 -->
-
-      <div class="footer-tour">
-
-        <h4>
-          NEXT TOUR
-        </h4>
-
-
-        <strong>
-          2027 겨울방학 투어
-        </strong>
-
-
-        <p>
-          📍 필리핀 세부
-        </p>
-
-
-        <p>
-          📅 2027.01.25 ~ 01.29
-        </p>
-
-
-        <a href="jeju-tour.html">
-          투어 자세히 보기 →
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-    <!-- 하단 -->
-
-    <div class="footer-bottom">
-
-
-      <span>
-        © 2026 School Of BLUE
-      </span>
-
-
-      <span>
-        Teacher`s Dive Club Since 2026
-      </span>
-
-
-    </div>
-
-
-  </footer>
-
-
-  <!-- =========================
-       갤러리 확대창
-  ========================== -->
-
-  <div
-    id="galleryModal"
-    class="gallery-modal">
-
-
-    <span
-      class="gallery-close"
-      onclick="closeGallery()">
-
-      ×
-
-    </span>
-
-
-    <img
-      id="galleryModalImage"
-      src=""
-      alt="확대된 다이빙 사진">
-
-  </div>
-
-
-  <!-- =========================
-       JavaScript
-  ========================== -->
-
-  <script
-    src="js/script.js">
-  </script>
+<script src="js/script.js"></script>
 
 
 </body>
